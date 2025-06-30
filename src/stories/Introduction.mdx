@@ -1,0 +1,147 @@
+import React from 'react';
+import { Meta } from '@storybook/addon-docs/blocks';
+import { useLanguageStore } from '../../src/stores/languageStore'
+import { LanguageSwitcher } from "../components/LanguageSwitcher";
+import styles from './styles/index.module.css'
+
+import Figma from './assets/figma.png'
+import CodeEN from './assets/code-en.png'
+import CodePT from './assets/code-pt.png'
+import CompEN from './assets/components-en.png'
+import CompPT from './assets/components-pt.png'
+import Tokens from './assets/tokens.png'
+
+export const RightArrow = () => <svg 
+    viewBox="0 0 14 14" 
+    width="8px" 
+    height="14px" 
+    style={{ 
+      marginLeft: '4px',
+      display: 'inline-block',
+      shapeRendering: 'inherit',
+      verticalAlign: 'middle',
+      fill: 'currentColor',
+      'path fill': 'currentColor'
+    }}
+>
+  <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
+</svg>
+
+
+<Meta title="Introduction" />
+
+export const ComponentOverview = () => {
+  const language = useLanguageStore(state => state.language);
+
+  const texts = {
+    en: {
+      title: "Introduction",
+      description: "IsskinUI is a React component library built to empower all Isskin projects and services with a unified, accessible, and reusable set of UI elements. Crafted to perfectly reflect our brand identity and design principles, IsskinUI helps teams deliver consistent and seamless user experiences across every product.",
+      link: "Find us on ",
+      blocks: [
+        // {
+        //   title: 'Figma Design System',
+        //   description: 'Explore the foundational styles, components, and patterns in our official Figma workspace.',
+        //   img: Figma,
+        //   link: 'Learn more',
+        //   url: '',
+        // },
+        {
+          title: 'How to Get Started',
+          description: 'Learn how to install and use IsskinUI components in your project step-by-step.',
+          img: CodeEN,
+          link: 'Learn more',
+          url: '/?path=/docs/how-to-get-started--docs',
+        },
+        {
+          title: 'Component Overview',
+          description: 'Browse the full list of available components, their props, and usage examples.',
+          img: CompEN,
+          link: 'Learn more',
+          url: '/?path=/docs/component-overview--docs',
+        },
+        {
+          title: 'Using Design Tokens',
+          description: 'Learn how to import and apply IsskinUI’s design tokens for colors, spacing, typography, and more.',
+          img: Tokens,
+          link: 'Learn more',
+          url: '/?path=/docs/design-tokens--docs',
+        }
+      ]
+    },
+    pt: {
+      title: "Introdução",
+      description: "IsskinUI é uma biblioteca de componentes React criada para fortalecer todos os projetos e serviços da Isskin com um conjunto unificado, acessível e reutilizável de elementos de interface. Desenvolvido para refletir com precisão nossa identidade de marca e princípios de design, o IsskinUI ajuda as equipes a oferecer experiências consistentes e fluidas em todos os produtos.",
+      link: "Nos encontre em ",
+      blocks: [
+        // {
+        //   title: 'Design System no Figma',
+        //   description: 'Explore os estilos, componentes e padrões no nosso workspace oficial do Figma.',
+        //   img: Figma,
+        //   link: 'Saiba mais',
+        //   url: '',
+        // },
+        {
+          title: 'Como Começar',
+          description: 'Aprenda como instalar e utilizar os componentes do IsskinUI passo a passo.',
+          img: CodePT,
+          link: 'Saiba mais',
+          url: '/?path=/docs/how-to-get-started--docs',
+        },
+        {
+          title: 'Visão Geral dos Componentes',
+          description: 'Veja a lista completa de componentes disponíveis, suas props e exemplos de uso.',
+          img: CompPT,
+          link: 'Saiba mais',
+          url: '/?path=/docs/component-overview--docs',
+        },
+        {
+          title: 'Usando Tokens de Design',
+          description: 'Aprenda como importar e aplicar os tokens de design do IsskinUI para cores, espaçamentos, tipografia e mais.',
+          img: Tokens,
+          link: 'Saiba mais',
+          url: '/?path=/docs/design-tokens--docs',
+        }
+      ],
+    }
+  };
+  
+  const t = texts[language];
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.sectionTitle}>
+        <h1>{t.title}</h1>
+
+        <p>{t.description}</p>        
+        <p style={{display: 'inline'}}>{t.link}</p>
+        <a href='https://isskindiagnostics.com/' target='_blank' style={{display: 'inline'}}>Isskin</a>
+
+      </div>
+
+      <div className={styles.section}>
+        {texts[language].blocks.map((block, index) => (
+          <div className={styles.sectionItem} key={index}>
+            <img
+              src={block.img}
+              alt={`Illustration for ${block.title}`}
+            />
+            <h4>{block.title}</h4>
+            <p>{block.description}</p>
+            <a
+              href={block.url}
+              rel="noopener noreferrer"
+            >
+              {block.link}
+              <RightArrow />
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+<LanguageSwitcher/>
+
+<ComponentOverview />

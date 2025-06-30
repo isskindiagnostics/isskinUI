@@ -1,0 +1,10 @@
+{
+  "shadow": {
+    "xs": {
+      "value": "0px 4px 54.3px 14px rgba(0, 0, 0, 0.07)"
+    },
+    "md": {
+      "value": "0px 16px 24px -8px rgba(0, 37, 48, 0.18)"
+    }
+  }
+}

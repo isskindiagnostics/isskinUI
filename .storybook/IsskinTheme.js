@@ -1,0 +1,9 @@
+import { create } from "storybook/theming";
+
+export default create({
+  base: "dark",
+  brandTitle: "IsskinUI",
+  brandUrl: "https://isskindiagnostics.com",
+  brandImage: "/logo-big-light.svg",
+  brandTarget: "_self",
+});
