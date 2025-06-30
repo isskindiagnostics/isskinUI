@@ -1,0 +1,24 @@
+.container {
+  left: 0;
+  display: flex;
+  gap: 3px;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.image {
+  height: 16px;
+  border-radius: 3px;
+}
+
+.select {
+  border: none;
+  font-size: 16px;
+  font-family: "Nunito Sans";
+  color: rgb(46, 52, 56);
+}
+
+.select:focus {
+  outline: none;
+}

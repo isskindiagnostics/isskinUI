@@ -1,0 +1,135 @@
+import React from 'react';
+import { Meta, Source } from '@storybook/addon-docs/blocks';
+import { useLanguageStore } from '../../src/stores/languageStore';
+import { LanguageSwitcher } from "../components/LanguageSwitcher";
+import styles from './styles/index.module.css';
+
+<Meta title="DesignTokens" />
+
+export const ComponentOverview = () => {
+  const language = useLanguageStore((state) => state.language);
+
+  const texts = {
+    en: {
+      title: 'Design Tokens & Theming',
+      description:
+        'Design tokens are the core style variables — such as colors, spacing, typography, and shadows — that power the consistent look and feel of IsskinUI components and your applications. By using tokens, you ensure your UI stays cohesive, accessible, and easy to maintain across your projects.',
+
+      cssTitle: '1. Using tokens as CSS Custom Properties',
+      cssDescription: 'Use them directly in your CSS files or inline styles with the var() function:',
+      cssCode: `.read-the-docs {
+  color: var(--color-brand-primary);
+}`,
+
+      jsTitle: '2. Using tokens in JavaScript / TypeScript',
+      jsDescription: 'Import the theme object and apply tokens inline with full autocomplete in your IDE:',
+      jsCode: `import { theme } from 'isskinui';
+
+function Example() {
+  return (
+    <p style={{ color: theme.colors.brand.primary, fontSize: theme.typography.text.desktop.md }}>
+      Hello, world!
+    </p>
+  );
+}`,
+      cssInJsTitle: '3. Using tokens with CSS-in-JS',
+      cssInJsDescription: 'Tokens integrate well with libraries like Vanilla Extract, for example:',
+      cssInJsCode: `import { style } from '@vanilla-extract/css';
+import { theme } from 'isskinui';
+
+export const exampleText = style({
+  color: theme.colors.brand.primary,
+  fontSize: theme.typography.text.desktop.md,
+  padding: theme.spacing.md,
+});`,
+
+      findTokensTitle: 'How to Find Token Names',
+      findTokensIntro: 'Here’s how to find the right token names quickly:',
+      findTokensTopics: [
+        'Inspect elements in the browser to see applied CSS variables like --color-brand-primary.',
+        'Use IDE autocomplete on the theme object to explore all available tokens with category and value hints.',
+        'Check the Storybook documentation to browse available tokens visually and interactively.'
+      ]
+    },
+
+    pt: {
+      title: 'Tokens de Design e Tematização',
+      description:
+        'Tokens de design são as variáveis principais de estilo — como cores, espaçamentos, tipografia e sombras — que garantem a aparência consistente dos componentes IsskinUI e suas aplicações. Ao usar tokens, sua interface permanece coesa, acessível e fácil de manter em todos os projetos.',
+
+      cssTitle: '1. Usando tokens como variáveis CSS',
+      cssDescription: 'Use diretamente em seus arquivos CSS ou em estilos inline com a função var():',
+      cssCode: `.read-the-docs {
+  color: var(--color-brand-primary);
+}`,
+
+      jsTitle: '2. Usando tokens no JavaScript / TypeScript',
+      jsDescription: 'Importe o objeto theme e use os tokens diretamente no estilo inline com autocomplete no seu editor:',
+      jsCode: `import { theme } from 'isskinui';
+
+function Exemplo() {
+  return (
+    <p style={{ color: theme.colors.brand.primary, fontSize: theme.typography.text.desktop.md }}>
+      Olá, mundo!
+    </p>
+  );
+}`,
+
+      cssInJsTitle: '3. Usando tokens com CSS-in-JS',
+      cssInJsDescription: 'Tokens se integram bem com soluções como Vanilla Extract, por exemplo:',
+      cssInJsCode: `import { style } from '@vanilla-extract/css';
+import { theme } from 'isskinui';
+
+export const exemploTexto = style({
+  color: theme.colors.brand.primary,
+  fontSize: theme.typography.text.desktop.md,
+  padding: theme.spacing.md,
+});`,
+
+      findTokensTitle: 'Como Encontrar os Nomes dos Tokens',
+      findTokensIntro: 'Você pode descobrir os nomes corretos dos tokens assim:',
+      findTokensTopics: [
+        'Inspecione elementos no navegador para ver variáveis CSS como --color-brand-primary.',
+        'Use autocomplete no objeto theme no seu editor para navegar por todas as categorias e valores.',
+        'Consulte a documentação no Storybook para explorar visualmente todos os tokens disponíveis.'
+      ]
+    }
+  };
+
+  const t = texts[language];
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.sectionTitle}>
+        <h1>{t.title}</h1>
+        <p>{t.description}</p>
+      </div>
+
+      <div className={styles.sectionVertical} style={{ width: '100%' }}>
+        <h3>{t.cssTitle}</h3>
+        <p>{t.cssDescription}</p>
+        <Source language="css" code={t.cssCode} />
+
+        <h3 style={{ marginTop: 24 }}>{t.jsTitle}</h3>
+        <p>{t.jsDescription}</p>
+        <Source language="tsx" code={t.jsCode} />
+
+        <h3 style={{ marginTop: 24 }}>{t.cssInJsTitle}</h3>
+        <p>{t.cssInJsDescription}</p>
+        <Source language="tsx" code={t.cssInJsCode} />
+
+        <h3 style={{ marginTop: 24 }}>{t.findTokensTitle}</h3>
+        <p>{t.findTokensIntro}</p>
+        <ul className={styles.list}>
+          {t.findTokensTopics.map((topic, i) => (
+            <li key={i}><p>{topic}</p></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+<LanguageSwitcher />
+
+<ComponentOverview />

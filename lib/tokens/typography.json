@@ -1,0 +1,470 @@
+{
+    "typography": {
+        "headline": {
+            "desktop": {
+                "xxl": {
+                    "fontSize": {
+                        "value": "54px"
+                    },
+                    "lineHeight": {
+                        "value": "62px"
+                    },
+                    "fontFamily": {
+                        "value": "'Manrope', sans-serif"
+                    }
+                },
+                "xl": {
+                    "fontSize": {
+                        "value": "42px"
+                    },
+                    "lineHeight": {
+                        "value": "55px"
+                    },
+                    "fontFamily": {
+                        "value": "'Manrope', sans-serif"
+                    }
+                },
+                "lg": {
+                    "fontSize": {
+                        "value": "32px"
+                    },
+                    "lineHeight": {
+                        "value": "40px"
+                    },
+                    "fontFamily": {
+                        "value": "'Manrope', sans-serif"
+                    }
+                },
+                "md": {
+                    "fontSize": {
+                        "value": "24px"
+                    },
+                    "lineHeight": {
+                        "value": "32px"
+                    },
+                    "fontFamily": {
+                        "value": "'Manrope', sans-serif"
+                    }
+                },
+                "sm": {
+                    "fontSize": {
+                        "value": "18px"
+                    },
+                    "lineHeight": {
+                        "value": "28px"
+                    },
+                    "fontFamily": {
+                        "value": "'Manrope', sans-serif"
+                    }
+                },
+                "xs": {
+                    "fontSize": {
+                        "value": "15px"
+                    },
+                    "lineHeight": {
+                        "value": "24px"
+                    },
+                    "fontFamily": {
+                        "value": "'Manrope', sans-serif"
+                    }
+                }
+            },
+            "mobile": {
+                "xxl": {
+                    "fontSize": {
+                        "value": "32px"
+                    },
+                    "lineHeight": {
+                        "value": "40px"
+                    },
+                    "fontFamily": {
+                        "value": "'Manrope', sans-serif"
+                    }
+                },
+                "xl": {
+                    "fontSize": {
+                        "value": "27px"
+                    },
+                    "lineHeight": {
+                        "value": "36px"
+                    },
+                    "fontFamily": {
+                        "value": "'Manrope', sans-serif"
+                    }
+                },
+                "lg": {
+                    "fontSize": {
+                        "value": "22px"
+                    },
+                    "lineHeight": {
+                        "value": "32px"
+                    },
+                    "fontFamily": {
+                        "value": "'Manrope', sans-serif"
+                    }
+                },
+                "md": {
+                    "fontSize": {
+                        "value": "18px"
+                    },
+                    "lineHeight": {
+                        "value": "28px"
+                    },
+                    "fontFamily": {
+                        "value": "'Manrope', sans-serif"
+                    }
+                },
+                "sm": {
+                    "fontSize": {
+                        "value": "15px"
+                    },
+                    "lineHeight": {
+                        "value": "24px"
+                    },
+                    "fontFamily": {
+                        "value": "'Manrope', sans-serif"
+                    }
+                },
+                "xs": {
+                    "fontSize": {
+                        "value": "13px"
+                    },
+                    "lineHeight": {
+                        "value": "20px"
+                    },
+                    "fontFamily": {
+                        "value": "'Manrope', sans-serif"
+                    }
+                }
+            }
+        },
+        "button": {
+            "desktop": {
+                "fontSize": {
+                    "value": "15px"
+                },
+                "lineHeight": {
+                    "value": "24px"
+                },
+                "fontFamily": {
+                    "value": "'Sora', sans-serif"
+                }
+            },
+            "mobile": {
+                "fontSize": {
+                    "value": "13px"
+                },
+                "lineHeight": {
+                    "value": "20px"
+                },
+                "fontFamily": {
+                    "value": "'Sora', sans-serif"
+                }
+            }
+        },
+        "action": {
+            "desktop": {
+                "xl": {
+                    "fontSize": {
+                        "value": "18px"
+                    },
+                    "lineHeight": {
+                        "value": "28px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "lg": {
+                    "fontSize": {
+                        "value": "15px"
+                    },
+                    "lineHeight": {
+                        "value": "24px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "md": {
+                    "fontSize": {
+                        "value": "11px"
+                    },
+                    "lineHeight": {
+                        "value": "18px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                }
+            },
+            "mobile": {
+                "xl": {
+                    "fontSize": {
+                        "value": "16px"
+                    },
+                    "lineHeight": {
+                        "value": "24px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "lg": {
+                    "fontSize": {
+                        "value": "13px"
+                    },
+                    "lineHeight": {
+                        "value": "20px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "md": {
+                    "fontSize": {
+                        "value": "11px"
+                    },
+                    "lineHeight": {
+                        "value": "18px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                }
+            }
+        },
+        "subline": {
+            "desktop": {
+                "xxl": {
+                    "fontSize": {
+                        "value": "18px"
+                    },
+                    "lineHeight": {
+                        "value": "28px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "xl": {
+                    "fontSize": {
+                        "value": "18px"
+                    },
+                    "lineHeight": {
+                        "value": "28px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "lg": {
+                    "fontSize": {
+                        "value": "18px"
+                    },
+                    "lineHeight": {
+                        "value": "28px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "md": {
+                    "fontSize": {
+                        "value": "15px"
+                    },
+                    "lineHeight": {
+                        "value": "20px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "sm": {
+                    "fontSize": {
+                        "value": "13px"
+                    },
+                    "lineHeight": {
+                        "value": "20px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "xs": {
+                    "fontSize": {
+                        "value": "13px"
+                    },
+                    "lineHeight": {
+                        "value": "20px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                }
+            },
+            "mobile": {
+                "xxl": {
+                    "fontSize": {
+                        "value": "15px"
+                    },
+                    "lineHeight": {
+                        "value": "24px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "xl": {
+                    "fontSize": {
+                        "value": "15px"
+                    },
+                    "lineHeight": {
+                        "value": "24px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "lg": {
+                    "fontSize": {
+                        "value": "13px"
+                    },
+                    "lineHeight": {
+                        "value": "20px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "md": {
+                    "fontSize": {
+                        "value": "11px"
+                    },
+                    "lineHeight": {
+                        "value": "18px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "sm": {
+                    "fontSize": {
+                        "value": "11px"
+                    },
+                    "lineHeight": {
+                        "value": "18px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "xs": {
+                    "fontSize": {
+                        "value": "11px"
+                    },
+                    "lineHeight": {
+                        "value": "18px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                }
+            }
+        },
+        "text": {
+            "desktop": {
+                "xxl": {
+                    "fontSize": {
+                        "value": "22px"
+                    },
+                    "lineHeight": {
+                        "value": "32px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "xl": {
+                    "fontSize": {
+                        "value": "18px"
+                    },
+                    "lineHeight": {
+                        "value": "28px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "lg": {
+                    "fontSize": {
+                        "value": "15px"
+                    },
+                    "lineHeight": {
+                        "value": "24px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "md": {
+                    "fontSize": {
+                        "value": "13px"
+                    },
+                    "lineHeight": {
+                        "value": "20px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                }
+            },
+            "mobile": {
+                "xxl": {
+                    "fontSize": {
+                        "value": "18px"
+                    },
+                    "lineHeight": {
+                        "value": "28px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "xl": {
+                    "fontSize": {
+                        "value": "16px"
+                    },
+                    "lineHeight": {
+                        "value": "24px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "lg": {
+                    "fontSize": {
+                        "value": "13px"
+                    },
+                    "lineHeight": {
+                        "value": "20px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                },
+                "md": {
+                    "fontSize": {
+                        "value": "11px"
+                    },
+                    "lineHeight": {
+                        "value": "18px"
+                    },
+                    "fontFamily": {
+                        "value": "'Sora', sans-serif"
+                    }
+                }
+            }
+        }
+    }
+}

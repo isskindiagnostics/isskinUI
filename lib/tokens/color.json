@@ -1,0 +1,66 @@
+{
+  "color": {
+    "brand": {
+      "primary": {
+        "value": "#23ABC2"
+      },
+      "white": {
+        "value": "#FFFFFF"
+      },
+      "black": {
+        "value": "#1A1C1E"
+      }
+    },
+    "base": {
+      "grey100": {
+        "value": "#364346"
+      },
+      "grey200": {
+        "value": "#7B898C"
+      },
+      "grey300": {
+        "value": "#CED8DA"
+      },
+      "grey400": {
+        "value": "#ECEFF2"
+      },
+      "blue100": {
+        "value": "#0F8FA5"
+      },
+      "blue200": {
+        "value": "#4D828D"
+      },
+      "blue300": {
+        "value": "#E3EFF1"
+      },
+      "blue400": {
+        "value": "#E3F3F6"
+      }
+    },
+    "background": {
+      "default": {
+        "value": "#F2FAFB"
+      },
+      "gradient100": {
+        "value": "linear-gradient(111deg, #F9FAFA 0.12%, #EFF6F8 100%)"
+      },
+      "gradient200": {
+        "value": "linear-gradient(111deg, #F9FAFA 0.12%, #E0EEF1 100%)"
+      }
+    },
+    "functions": {
+      "error": {
+        "value": "#F73946"
+      },
+      "warning": {
+        "value": "#FF6D00"
+      },
+      "success": {
+        "value": "#76B228"
+      },
+      "disabled": {
+        "value": "#B9C4C8"
+      }
+    }
+  }
+}

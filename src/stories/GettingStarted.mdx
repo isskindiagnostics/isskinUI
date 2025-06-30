@@ -1,0 +1,100 @@
+import React from 'react';
+import { Meta, Source } from '@storybook/addon-docs/blocks';
+import { useLanguageStore } from '../../src/stores/languageStore'
+import { LanguageSwitcher } from "../components/LanguageSwitcher";
+import styles from './styles/index.module.css'
+
+<Meta title="How to Get Started" />
+
+export const ComponentOverview = () => {
+  const language = useLanguageStore((state) => state.language);
+
+  const texts = {
+    en: {
+      title: 'How to Get Started',
+      description:
+        'Follow these simple steps to install IsskinUI, import components, and start building beautiful, consistent interfaces.',
+      installTitle: '1. Install the library',
+      installDescription:
+        'Use npm or yarn to add IsskinUI to your project dependencies.',
+      installCode: `npm install isskinui
+# or
+yarn add isskinui`,
+      usageTitle: '2. Import and use components',
+      usageDescription:
+        'Import components directly from the library and use them in your React code.',
+      usageCode: `import { Button } from 'isskinui';
+
+function App() {
+  return <Button>Click me</Button>;
+}`,
+      tipsTitle: 'Tips & Best Practices',
+      tipsIntro:
+        'To get the most out of IsskinUI and build scalable, maintainable interfaces, keep these best practices in mind:',
+      tipsTopics: [
+        'Leverage design tokens to maintain consistent colors, spacing, typography, and other styles throughout your app.',
+        'Take advantage of the Storybook documentation to explore components, view live examples, and understand usage patterns.',
+      ],
+    },
+    pt: {
+      title: 'Como Começar',
+      description:
+        'Siga estes passos simples para instalar o IsskinUI, importar componentes e começar a criar interfaces bonitas e consistentes.',
+      installTitle: '1. Instale a biblioteca',
+      installDescription:
+        'Use npm ou yarn para adicionar o IsskinUI às dependências do seu projeto.',
+      installCode: `npm install isskinui
+# ou
+yarn add isskinui`,
+      usageTitle: '2. Importe e use os componentes',
+      usageDescription:
+        'Importe componentes diretamente da biblioteca e use-os no seu código React.',
+      usageCode: `import { Button } from 'isskinui';
+
+function App() {
+  return <Button>Clique aqui</Button>;
+}`,
+      tipsTitle: 'Dicas e Boas Práticas',
+      tipsIntro:
+        'Para aproveitar ao máximo o IsskinUI e construir interfaces escaláveis e fáceis de manter, fique atento a estas recomendações:',
+      tipsTopics: [
+        'Utilize os tokens de design para garantir consistência nas cores, espaçamentos, tipografia e demais estilos do seu app.',
+        'Explore a documentação no Storybook para conhecer os componentes, ver exemplos ao vivo e entender as melhores formas de uso.',
+      ],
+    },
+  };
+
+
+  const t = texts[language];
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.sectionTitle}>
+        <h1>{t.title}</h1>
+        <p>{t.description}</p>
+      </div>
+
+      <div className={styles.sectionVertical} style={{ width: '100%' }}>
+        <h3>{t.installTitle}</h3>
+        <p>{t.installDescription}</p>
+        <Source language="bash" code={t.installCode} />
+
+        <h3 style={{ marginTop: 24 }}>{t.usageTitle}</h3>
+        <p>{t.usageDescription}</p>
+        <Source language="tsx" code={t.usageCode} />
+
+        <h3 style={{ marginTop: 24 }}>{t.tipsTitle}</h3>
+        <p>{t.tipsIntro}</p>
+        <ul className={styles.list}>
+          {t.tipsTopics.map((topic, i) => (
+            <li key={i}><p>{topic}</p></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+<LanguageSwitcher/>
+
+<ComponentOverview />

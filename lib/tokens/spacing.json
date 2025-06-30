@@ -1,0 +1,13 @@
+{
+  "spacing": {
+    "xs": {
+      "value": "14px"
+    },
+    "sm": {
+      "value": "25px"
+    },
+    "lg": {
+      "value": "30px"
+    }
+  }
+}
