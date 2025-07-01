@@ -36,111 +36,93 @@ export declare const theme: {
     lg: string;
   };
   typography: {
+    fontFamilyHeadline: string;
+    fontFamilyBody: string;
     headline: {
       desktop: {
         xxl: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         xl: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         lg: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         md: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         sm: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         xs: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
       };
       mobile: {
         xxl: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         xl: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         lg: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         md: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         sm: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         xs: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
       };
     };
     buttonDesktopFontSize: string;
     buttonDesktopLineHeight: string;
-    buttonDesktopFontFamily: string;
     buttonMobileFontSize: string;
     buttonMobileLineHeight: string;
-    buttonMobileFontFamily: string;
     action: {
       desktop: {
         xl: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         lg: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         md: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
       };
       mobile: {
         xl: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         lg: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         md: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
       };
     };
@@ -149,64 +131,52 @@ export declare const theme: {
         xxl: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         xl: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         lg: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         md: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         sm: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         xs: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
       };
       mobile: {
         xxl: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         xl: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         lg: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         md: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         sm: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         xs: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
       };
     };
@@ -215,44 +185,36 @@ export declare const theme: {
         xxl: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         xl: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         lg: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         md: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
       };
       mobile: {
         xxl: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         xl: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         lg: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
         md: {
           fontSize: string;
           lineHeight: string;
-          fontFamily: string;
         };
       };
     };
