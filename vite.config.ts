@@ -28,6 +28,12 @@ export default defineConfig({
       outDir: "dist",
     }),
   ],
+  resolve: {
+    alias: {
+      "@isskinui/icons": resolve(__dirname, "lib/icons/index.ts"),
+      "@isskinui/components": resolve(__dirname, "lib/components/index.ts"),
+    },
+  },
   build: {
     copyPublicDir: false,
     lib: {
