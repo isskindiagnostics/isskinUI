@@ -1,0 +1,65 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 92px;
+  height: 28px;
+}
+
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  border: 2px solid var(--color-brand-black);
+  transition: ease-in-out 0.1s;
+}
+
+.checkbox:hover {
+  border-width: 3px;
+}
+
+.checkbox:disabled {
+  border-color: var(--color-functions-disabled);
+  pointer-events: none;
+}
+
+.checkbox:disabled + .label {
+  color: var(--color-functions-disabled);
+  pointer-events: none;
+}
+
+.checkbox:checked:disabled {
+  background-color: var(--color-functions-disabled);
+}
+
+.checkbox:focus-visible {
+  border-radius: 3px;
+  outline-offset: 3px;
+  outline: 2px solid var(--color-base-grey100);
+}
+
+.checkbox:checked {
+  background-color: var(--color-brand-black);
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 6L9 17L4 12' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+.checkbox:checked:hover {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 6L9 17L4 12' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+.label {
+  color: var(--color-brand-black);
+  font-family: var(--typography-font-family-body);
+  font-size: var(--typography-text-desktop-xl-font-size);
+  line-height: var(--typography-text-desktop-xl-line-heihgt);
+  cursor: pointer;
+}
