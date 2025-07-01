@@ -29,7 +29,6 @@ const meta: Meta<typeof Checkbox> = {
       control: { type: "text" },
       description: "Name attribute for the checkbox input.",
     },
-    onChange: { action: "changed" },
   },
 };
 
@@ -40,6 +39,9 @@ type Story = StoryObj<typeof Checkbox>;
 export const Default: Story = {
   args: {
     label: "Label",
+    checked: false,
+    id: "",
+    name: "",
     disabled: false,
   },
 };
