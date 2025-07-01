@@ -4,46 +4,57 @@ import { useLanguageStore } from "../../src/stores/languageStore";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import styles from "./styles/index.module.css";
 import Notification from "./assets/notification.png";
+import IconLink from "./assets/icon-link.png"
 
 <Meta title="Component Overview" />
 
 export const ComponentOverview = () => {
   const language = useLanguageStore(state => state.language);
 
-const texts = {
-en: {
-title: "Component Overview",
-description:
-"IsskinUI offers a comprehensive collection of React components crafted for consistency, accessibility, and ease of use. From buttons to modals and inputs to layout primitives, every component is thoughtfully designed to match our design system and seamlessly integrate into our apps.",
-cards: [
-{
-component: Notification,
-name: "Notification",
-link: '/?path=/docs/components-notification--docs',
-},
-],
-},
-pt: {
-title: "Visão Geral dos Componentes",
-description:
-"O IsskinUI oferece uma coleção abrangente de componentes React projetados com foco em consistência, acessibilidade e facilidade de uso. De botões a modais, de inputs a elementos de layout, cada componente segue fielmente o nosso design system e se integra com fluidez aos nossos apps.",
-cards: [
-{
-component: Notification,
-name: "Notificação",
-link: '/?path=/docs/components-notification--docs',
-},
-],
-}
-};
+  const texts = {
+    en: {
+      title: "Component Overview",
+      description:
+        "IsskinUI offers a comprehensive collection of React components crafted for consistency, accessibility, and ease of use. From buttons to modals and inputs to layout primitives, every component is thoughtfully designed to match our design system and seamlessly integrate into our apps.",
+      cards: [
+        {
+          component: Notification,
+          name: "Notification",
+          link: '/?path=/docs/components-notification--docs',
+        },
+        {
+          component: IconLink,
+          name: "Icon Link",
+          link: '/?path=/docs/components-iconlink--docs',
+        },
+      ],
+    },
+    pt: {
+      title: "Visão Geral dos Componentes",
+      description:
+        "O IsskinUI oferece uma coleção abrangente de componentes React projetados com foco em consistência, acessibilidade e facilidade de uso. De botões a modais, de inputs a elementos de layout, cada componente segue fielmente o nosso design system e se integra com fluidez aos nossos apps.",
+      cards: [
+        {
+          component: Notification,
+          name: "Notificação",
+          link: '/?path=/docs/components-notification--docs',
+        },
+        {
+          component: IconLink,
+          name: "Link com Ícone",
+          link: '/?path=/docs/components-iconlink--docs',
+        },
+      ],
+    }
+  };
 
-const t = texts[language];
+  const t = texts[language];
 
-return (
+  return (
 
-<div className={styles.container}>
-<div className={styles.sectionTitle}>
-<h1>{t.title}</h1>
+    <div className={styles.container}>
+      <div className={styles.sectionTitle}>
+        <h1>{t.title}</h1>
 
         <p>{t.description}</p>
       </div>
@@ -64,7 +75,7 @@ return (
       </div>
     </div>
 
-);
+  );
 };
 
 <LanguageSwitcher />
