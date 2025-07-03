@@ -17,6 +17,10 @@ export default tseslint.config(
       plugins: {
         "simple-import-sort": simpleImportSort,
       },
+      rules: {
+        "simple-import-sort/imports": "warn",
+        "simple-import-sort/exports": "warn",
+      },
       extends: [
         js.configs.recommended,
         tseslint.configs.recommended,
@@ -29,5 +33,5 @@ export default tseslint.config(
       },
     },
   ],
-  storybook.configs["flat/recommended"]
+  storybook.configs["flat/recommended"],
 );

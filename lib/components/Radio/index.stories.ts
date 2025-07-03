@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+
 import Radio from "./index";
 
 const meta: Meta<typeof Radio> = {
