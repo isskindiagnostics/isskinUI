@@ -12,6 +12,7 @@
     "build:tokens": "style-dictionary build --config lib/style-dictionary.config.js",
     "build": "npm run build:tokens && node lib/scripts/buildNestedTokens.js && tsc --p ./tsconfig.lib.json && vite build",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "preview": "vite preview --config playground/vite.config.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",

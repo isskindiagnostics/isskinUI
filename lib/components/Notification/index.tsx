@@ -1,6 +1,7 @@
 import { Check } from "@isskinui/icons";
 import { Alert } from "@isskinui/icons";
 import { Error } from "@isskinui/icons";
+
 import styles from "./index.module.css";
 
 type NotificationProps = {

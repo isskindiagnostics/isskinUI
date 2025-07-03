@@ -1,11 +1,12 @@
+import * as Icon from "@isskinui/icons";
+import type { Icons } from "lib/types/icons";
 import type {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,
   PropsWithChildren,
 } from "react";
+
 import styles from "./index.module.css";
-import type { Icons } from "lib/types/icons";
-import * as Icon from "@isskinui/icons";
 
 type IconLinkProps = PropsWithChildren<
   (

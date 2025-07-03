@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import IconLink from "./index";
+
 import { IconsArray } from "../../types/icons";
+import IconLink from "./index";
 
 const meta: Meta<typeof IconLink> = {
   title: "Components/IconLink",
