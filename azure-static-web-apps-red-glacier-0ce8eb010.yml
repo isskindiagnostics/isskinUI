@@ -25,6 +25,9 @@ jobs:
       versionSpec: '18.x'  # or preferred Node.js version
     displayName: 'Install Node.js'
 
+  - script: npm ci
+    displayName: 'Install dependencies'
+
   - script: npm run build-storybook
     displayName: 'Build Storybook'
   - task: AzureStaticWebApp@0
