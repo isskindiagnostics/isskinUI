@@ -1,5 +1,4 @@
 .button {
-  box-sizing: border-box;
   border: none;
   padding: 8px 20px;
   font-family: var(--typography-font-family-body);
