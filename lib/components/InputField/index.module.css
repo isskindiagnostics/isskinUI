@@ -1,0 +1,110 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 380px;
+}
+
+.label {
+  font-family: var(--typography-font-family-body);
+  font-size: var(--typography-text-desktop-md-font-size);
+  line-height: var(--typography-text-desktop-md-line-height);
+  color: var(--color-base-grey100);
+}
+
+.iconWrapper {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 41px;
+  right: 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.icon {
+  width: 21px;
+  height: 21px;
+  color: var(--color-base-grey100);
+}
+
+.disabled .label,
+.disabled .icon {
+  color: var(--color-functions-disabled);
+}
+
+.input {
+  font-family: var(--typography-font-family-body);
+  font-size: var(--typography-text-desktop-xl-font-size);
+  color: var(--color-brand-black);
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-base-grey100);
+  padding: 14px 45px 14px 16px;
+  transition: ease-in-out 0.1s;
+  font-weight: 300;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.input[type="password"] {
+  font-family: sans-serif;
+}
+
+.input::placeholder {
+  font-family: var(--typography-font-family-body);
+  font-size: var(--typography-text-desktop-xl-font-size);
+  color: var(--color-base-grey200);
+  font-weight: 300;
+}
+
+.input:disabled::placeholder {
+  color: var(--color-functions-disabled);
+}
+
+.input:hover {
+  box-shadow: inset 0 0 0 1px var(--color-base-grey100);
+}
+
+.input:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 1px var(--color-base-grey100);
+}
+
+.input:disabled {
+  pointer-events: none;
+  background-color: transparent;
+  border-color: var(--color-functions-disabled);
+}
+
+.error,
+.hint {
+  font-family: var(--typography-font-family-body);
+  font-size: var(--typography-text-desktop-md-font-size);
+  line-height: var(--typography-text-desktop-md-line-height);
+  color: var(--color-functions-error);
+  margin: 0;
+}
+
+.error {
+  color: var(--color-functions-error);
+}
+
+.hint {
+  color: var(--color-brand-black);
+}
+
+.disabled .hint {
+  color: var(--color-functions-disabled);
+}
