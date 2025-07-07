@@ -88,6 +88,19 @@
   border-color: var(--color-functions-disabled);
 }
 
+.inputError {
+  border-color: var(--color-functions-error);
+}
+
+.inputError:hover {
+  box-shadow: inset 0 0 0 1px var(--color-functions-error);
+}
+
+.inputError:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 1px var(--color-functions-error);
+}
+
 .error,
 .hint {
   font-family: var(--typography-font-family-body);

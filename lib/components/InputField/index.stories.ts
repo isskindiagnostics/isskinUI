@@ -59,7 +59,7 @@ export const Default: Story = {
     label: "Label",
     icon: undefined,
     disabled: false,
-    error: "Invalid date",
+    error: "",
     placeholder: "Placeholder",
     hint: "Optional hint",
     width: "380px",
