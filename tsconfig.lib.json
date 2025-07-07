@@ -8,7 +8,8 @@
     "baseUrl": ".",
     "paths": {
       "@isskinui/icons": ["lib/icons/index.ts"],
-      "@isskinui/components": ["lib/components/index.ts"]
+      "@isskinui/components": ["lib/components/index.ts"],
+      "@isskinui/theme": ["lib/theme/themeNested.ts"],
     }
   },
   "include": ["lib", "lib/types/svg.d.ts"]

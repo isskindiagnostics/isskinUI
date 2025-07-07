@@ -140,7 +140,7 @@ const DatePicker = forwardRef<ReactDatePicker, DatePickerProps>(
           selected={selected}
           onBlur={handleBlur}
           value={inputValue}
-          className={styles.datePicker}
+          className={`${error && styles.inputError}`}
           disabled={disabled}
           minDate={minDate}
           maxDate={maxDate}
@@ -160,8 +160,8 @@ const DatePicker = forwardRef<ReactDatePicker, DatePickerProps>(
           aria-hidden="true"
           onClick={() => setIsOpen(true)}
         />
-        {hint && <p className={styles.hint}>{hint}</p>}
         {error && <p className={styles.error}>{error}</p>}
+        {hint && <p className={styles.hint}>{hint}</p>}
       </div>
     );
   },
