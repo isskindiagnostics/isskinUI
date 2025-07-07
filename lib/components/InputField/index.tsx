@@ -56,7 +56,7 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
           ref={ref}
           type={type}
           id={inputId}
-          className={styles.input}
+          className={`${styles.input} ${error && styles.inputError}`}
           aria-invalid={!!error}
           disabled={disabled}
           {...rest}
@@ -71,8 +71,8 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
             <IconComponent className={styles.icon} />
           </button>
         )}
-        {hint && <p className={styles.hint}>{hint}</p>}
         {error && <p className={styles.error}>{error}</p>}
+        {hint && <p className={styles.hint}>{hint}</p>}
       </div>
     );
   },
