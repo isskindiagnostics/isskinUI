@@ -46,7 +46,7 @@ export default defineConfig({
       input: (() => {
         const tsEntries = glob
           .sync("lib/**/*.{ts,tsx}", {
-            ignore: ["lib/**/*.d.ts", "lib/**/*.stories.ts"],
+            ignore: ["lib/**/*.d.ts", "lib/**/*.stories.ts", "lib/scripts/**"],
           })
           .map((file) => [
             relative("lib", file.slice(0, file.length - extname(file).length)),

@@ -44,7 +44,7 @@ type Story = StoryObj<typeof DatePicker>;
 export const Default: Story = {
   args: {
     label: "Date",
-    errorMessage: "Invalid date",
+    errorMessage: "",
     placeholder: "DD/MM/AAAA",
     disabled: false,
     hint: "",
