@@ -6,6 +6,7 @@ import InputField from "./InputField";
 import Notification from "./Notification";
 import Radio from "./Radio";
 import Switch from "./Switch";
+import Link from "./Link";
 
 export {
   Button,
@@ -16,4 +17,5 @@ export {
   Notification,
   Radio,
   Switch,
+  Link,
 };
