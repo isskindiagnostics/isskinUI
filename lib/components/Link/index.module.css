@@ -22,12 +22,16 @@
   color: var(--color-base-blue100);
 }
 
+.strong:focus-visible {
+  color: var(--color-brand-primary);
+  outline: none;
+}
+
 .underlined {
   position: relative;
   color: var(--color-brand-black);
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
-  padding-bottom: 2px;
 }
 
 .underlined::after {
@@ -40,15 +44,20 @@
   background-color: var(--color-brand-primary);
   transition:
     height 0.2s ease,
-    background-color 0.2s ease;
+    background-color 0.1s ease;
 }
 
-.underlined:hover::after {
-  height: 6px;
-  background-color: var(--color-base-blue100);
+.underlined:hover::after,
+.underlined:focus-visible::after {
+  height: 10px;
+  background-color: var(--color-brand-primary);
+  z-index: -1;
+}
+
+.underlined:focus-visible {
+  outline: none;
 }
 
 .underlined:active::after {
-  height: 6px;
-  background-color: var(--color-base-blue200);
+  background-color: var(--color-base-blue100);
 }
