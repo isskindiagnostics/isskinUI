@@ -5,6 +5,7 @@ import IconLink from "./IconLink";
 import InputField from "./InputField";
 import Notification from "./Notification";
 import Radio from "./Radio";
+import Select from "./Select";
 import Switch from "./Switch";
 
 export {
@@ -15,5 +16,6 @@ export {
   InputField,
   Notification,
   Radio,
+  Select,
   Switch,
 };
