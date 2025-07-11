@@ -6,6 +6,7 @@ import InputField from "./InputField";
 import Link from "./Link";
 import Notification from "./Notification";
 import Radio from "./Radio";
+import Search from "./Search";
 import Select from "./Select";
 import Switch from "./Switch";
 
@@ -18,6 +19,7 @@ export {
   Link,
   Notification,
   Radio,
+  Search,
   Select,
   Switch,
 };
