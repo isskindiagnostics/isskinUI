@@ -7,6 +7,7 @@ import Notification from "./Notification";
 import Radio from "./Radio";
 import Select from "./Select";
 import Switch from "./Switch";
+import Tooltip from "./Tooltip";
 
 export {
   Button,
@@ -18,4 +19,5 @@ export {
   Radio,
   Select,
   Switch,
+  Tooltip,
 };
