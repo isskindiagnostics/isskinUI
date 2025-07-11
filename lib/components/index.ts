@@ -3,11 +3,12 @@ import Checkbox from "./Checkbox";
 import DatePicker from "./DatePicker";
 import IconLink from "./IconLink";
 import InputField from "./InputField";
+import Link from "./Link";
 import Notification from "./Notification";
 import Radio from "./Radio";
+import Search from "./Search";
 import Select from "./Select";
 import Switch from "./Switch";
-import Link from "./Link";
 
 export {
   Button,
@@ -15,9 +16,10 @@ export {
   DatePicker,
   IconLink,
   InputField,
+  Link,
   Notification,
   Radio,
+  Search,
   Select,
   Switch,
-  Link,
 };
