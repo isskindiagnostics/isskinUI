@@ -1,6 +1,8 @@
 import Button from "./Button";
 import Checkbox from "./Checkbox";
+import Chip from "./Chip";
 import DatePicker from "./DatePicker";
+import Filter from "./Filter";
 import IconLink from "./IconLink";
 import InputField from "./InputField";
 import Link from "./Link";
@@ -14,7 +16,9 @@ import Tooltip from "./Tooltip";
 export {
   Button,
   Checkbox,
+  Chip,
   DatePicker,
+  Filter,
   IconLink,
   InputField,
   Link,
