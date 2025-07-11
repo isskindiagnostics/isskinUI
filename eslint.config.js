@@ -8,14 +8,18 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 import { globalIgnores } from "eslint/config";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
+import regexpPlugin from "eslint-plugin-regexp";
+import jsxA11y from "eslint-plugin-jsx-a11y";
 
 export default tseslint.config(
   [
-    globalIgnores(["dist"]),
+    globalIgnores(["dist", "storybook-static"]),
     {
       files: ["**/*.{ts,tsx}"],
       plugins: {
         "simple-import-sort": simpleImportSort,
+        regexp: regexpPlugin,
+        "jsx-a11y": jsxA11y,
       },
       rules: {
         "simple-import-sort/imports": "warn",

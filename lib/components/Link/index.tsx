@@ -1,4 +1,5 @@
 import type { AnchorHTMLAttributes, PropsWithChildren } from "react";
+
 import styles from "./index.module.css";
 
 type LinkProps = PropsWithChildren<
