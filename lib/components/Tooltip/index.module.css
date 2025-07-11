@@ -1,0 +1,86 @@
+@keyframes fadeInTooltip {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tooltip {
+  position: relative;
+  max-width: 269px;
+  background-color: var(--color-brand-black);
+  color: var(--color-brand-white);
+  font-family: var(--typography-font-family-body);
+  font-size: var(--typography-text-mobile-md-font-size);
+  line-height: var(--typography-text-mobile-md-line-height);
+  padding: var(--spacing-xs);
+  border-radius: 14px;
+  gap: 8px;
+  box-shadow: var(--shadow-md);
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  margin: 0;
+  padding: 0;
+  color: var(--color-brand-white);
+  font-weight: 400;
+}
+
+.actionLinkWrapper {
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.iconLink {
+  color: var(--color-brand-white);
+  font-family: var(--typography-font-family-body);
+  font-size: var(--typography-action-mobile-md-font-size);
+  line-height: var(--typography-action-mobile-md-line-height);
+  font-weight: 600;
+}
+
+.iconLink:hover {
+  color: var(--color-base-blue300);
+}
+
+.iconLink:focus-visible {
+  color: var(--color-brand-white);
+}
+
+/* Setinha do tooltip */
+.arrow {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-brand-black);
+  box-shadow: var(--shadow-md);
+  transform: rotate(45deg);
+  border-radius: 3px;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+  z-index: -1;
+  bottom: -8px;
+}
+
+/* Posicionamento da seta para cada posição */
+.center .arrow {
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.left .arrow {
+  left: 33px;
+  transform: rotate(45deg);
+}
+
+.right .arrow {
+  right: 33px;
+  transform: rotate(45deg);
+}

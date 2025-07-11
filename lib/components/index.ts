@@ -9,6 +9,7 @@ import Radio from "./Radio";
 import Search from "./Search";
 import Select from "./Select";
 import Switch from "./Switch";
+import Tooltip from "./Tooltip";
 
 export {
   Button,
@@ -22,4 +23,5 @@ export {
   Search,
   Select,
   Switch,
+  Tooltip,
 };

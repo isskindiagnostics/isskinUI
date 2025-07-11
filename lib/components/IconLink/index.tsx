@@ -8,13 +8,14 @@ import type {
 
 import styles from "./index.module.css";
 
-type IconLinkProps = PropsWithChildren<
+export type IconLinkProps = PropsWithChildren<
   (
     | (ButtonHTMLAttributes<HTMLButtonElement> & { renderAs?: "button" })
     | (AnchorHTMLAttributes<HTMLAnchorElement> & { renderAs: "link" })
   ) & {
     icon: Icons;
     iconPosition?: "left" | "right";
+    iconSize?: number;
     disabled?: boolean;
   }
 >;
@@ -22,21 +23,31 @@ type IconLinkProps = PropsWithChildren<
 const IconLink = ({
   icon,
   iconPosition = "left",
+  iconSize,
   renderAs = "link",
   disabled,
+  className,
   children,
   ...rest
 }: IconLinkProps) => {
   const IconComponent = Icon[icon];
-  const className = `${styles.element} ${disabled ? styles.disabled : ""}`;
+  const elmStyles = `${styles.element} ${disabled ? styles.disabled : ""}`;
   const content = (
     <>
       {iconPosition === "left" && (
-        <IconComponent className={styles.icon} aria-hidden="true" />
+        <IconComponent
+          className={styles.icon}
+          style={{ width: iconSize, height: iconSize }}
+          aria-hidden="true"
+        />
       )}
       {children}
       {iconPosition === "right" && (
-        <IconComponent className={styles.icon} aria-hidden="true" />
+        <IconComponent
+          className={styles.icon}
+          style={{ width: iconSize, height: iconSize }}
+          aria-hidden="true"
+        />
       )}
     </>
   );
@@ -45,7 +56,7 @@ const IconLink = ({
     return (
       <button
         disabled={disabled}
-        className={className}
+        className={`${className} ${elmStyles}`}
         {...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}
       >
         {content}
@@ -55,7 +66,7 @@ const IconLink = ({
 
   return (
     <a
-      className={className}
+      className={`${className} ${elmStyles}`}
       tabIndex={disabled ? -1 : undefined}
       aria-disabled={disabled}
       onClick={disabled ? (e) => e.preventDefault() : undefined}
