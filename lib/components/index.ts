@@ -7,6 +7,7 @@ import IconLink from "./IconLink";
 import InputField from "./InputField";
 import Link from "./Link";
 import Notification from "./Notification";
+import Pagination from "./Pagination";
 import Radio from "./Radio";
 import Search from "./Search";
 import Select from "./Select";
@@ -23,6 +24,7 @@ export {
   InputField,
   Link,
   Notification,
+  Pagination,
   Radio,
   Search,
   Select,
