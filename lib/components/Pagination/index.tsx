@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 
-type PaginationProps = {
+export type PaginationProps = {
   total: number;
   current: number;
   onChange: (number: number) => void;
@@ -13,6 +13,7 @@ const Pagination = ({ total, current, onChange }: PaginationProps) => {
         <button
           key={i}
           onClick={() => onChange(i)}
+          aria-label={`Página ${i + 1}`}
           className={`${styles.button} ${i === current && styles.current}`}
         />
       ))}

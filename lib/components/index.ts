@@ -3,6 +3,7 @@ import Checkbox from "./Checkbox";
 import Chip from "./Chip";
 import DatePicker from "./DatePicker";
 import Filter from "./Filter";
+import HelpCard from "./HelpCard";
 import IconLink from "./IconLink";
 import InputField from "./InputField";
 import Link from "./Link";
@@ -20,6 +21,7 @@ export {
   Chip,
   DatePicker,
   Filter,
+  HelpCard,
   IconLink,
   InputField,
   Link,
