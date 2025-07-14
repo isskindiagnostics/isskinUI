@@ -13,6 +13,7 @@ import Pagination from "./Pagination";
 import Radio from "./Radio";
 import Search from "./Search";
 import Select from "./Select";
+import StepNavigation from "./StepNavigation";
 import Switch from "./Switch";
 import Tooltip from "./Tooltip";
 
@@ -32,6 +33,7 @@ export {
   Radio,
   Search,
   Select,
+  StepNavigation,
   Switch,
   Tooltip,
 };
