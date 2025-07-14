@@ -3,12 +3,8 @@ import { Meta } from "@storybook/addon-docs/blocks";
 import { useLanguageStore } from "../../src/stores/languageStore";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import styles from "./styles/index.module.css";
-
-import Notification from "./assets/notification.png";
-import Button from "./assets/button.png";
-import IconLink from "./assets/icon-link.png"
-import Checkbox from "./assets/checkbox.png"
-import Radio from "./assets/radio.png"
+import { en } from '../i18n/en'
+import { pt } from '../i18n/pt'
 
 <Meta title="Component Overview" />
 
@@ -16,70 +12,8 @@ export const ComponentOverview = () => {
   const language = useLanguageStore(state => state.language);
 
   const texts = {
-    en: {
-      title: "Component Overview",
-      description:
-        "IsskinUI offers a comprehensive collection of React components crafted for consistency, accessibility, and ease of use. From buttons to modals and inputs to layout primitives, every component is thoughtfully designed to match our design system and seamlessly integrate into our apps.",
-      cards: [
-        {
-          component: Notification,
-          name: "Notification",
-          link: '/?path=/docs/components-notification--docs',
-        },
-        {
-          component: Button,
-          name: "Button",
-          link: '/?path=/docs/components-button--docs',
-        },
-        {
-          component: IconLink,
-          name: "Icon Link",
-          link: '/?path=/docs/components-iconlink--docs',
-        },
-        {
-          component: Checkbox,
-          name: "Checkbox",
-          link: '/?path=/docs/components-checkbox--docs',
-        },
-        {
-          component: Radio,
-          name: "Radio Button",
-          link: '/?path=/docs/components-radio--docs',
-        },
-      ],
-    },
-    pt: {
-      title: "Visão Geral dos Componentes",
-      description:
-        "O IsskinUI oferece uma coleção abrangente de componentes React projetados com foco em consistência, acessibilidade e facilidade de uso. De botões a modais, de inputs a elementos de layout, cada componente segue fielmente o nosso design system e se integra com fluidez aos nossos apps.",
-      cards: [
-        {
-          component: Notification,
-          name: "Notificação",
-          link: '/?path=/docs/components-notification--docs',
-        },
-        {
-          component: Button,
-          name: "Botão",
-          link: '/?path=/docs/components-button--docs',
-        },
-        {
-          component: IconLink,
-          name: "Link com Ýcone",
-          link: '/?path=/docs/components-iconlink--docs',
-        },
-        {
-          component: Checkbox,
-          name: "Caixa de Seleção",
-          link: '/?path=/docs/components-checkbox--docs',
-        },
-        {
-          component: Radio,
-          name: "Botão de Opção",
-          link: "/?path=/docs/components-radio--docs",
-        },
-      ],
-    }
+    en: en,
+    pt: pt,
   };
 
   const t = texts[language];

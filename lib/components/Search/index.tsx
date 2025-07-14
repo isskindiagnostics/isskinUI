@@ -1,4 +1,4 @@
-import { Close, Search as SearchIcon } from "@isskinui/icons";
+import { Close, Magnifier } from "@isskinui/icons";
 import {
   type CSSProperties,
   type InputHTMLAttributes,
@@ -71,7 +71,7 @@ const Search = ({
       }}
     >
       <div className={styles.inputWrapper}>
-        <SearchIcon className={styles.searchIcon} aria-hidden="true" />
+        <Magnifier className={styles.searchIcon} aria-hidden="true" />
         <input
           id={rest.id ?? "search-input"}
           name={rest.name ?? "search"}
