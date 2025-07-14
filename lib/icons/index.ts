@@ -23,7 +23,7 @@ import ExternalLink from "./external-link.svg?react";
 import Eye from "./eye.svg?react";
 import EyeOff from "./eye-off.svg?react";
 import FileImage from "./file-image.svg?react";
-import Filter from "./filter.svg?react";
+import Sort from "./filter.svg?react";
 import Gender from "./gender.svg?react";
 import Image from "./image.svg?react";
 import Info from "./info.svg?react";
@@ -41,7 +41,7 @@ import Plus from "./plus.svg?react";
 import Question from "./question.svg?react";
 import Redo from "./redo.svg?react";
 import Rotate from "./rotate.svg?react";
-import Search from "./search.svg?react";
+import Magnifier from "./search.svg?react";
 import Settings from "./settings.svg?react";
 import Share from "./share.svg?react";
 import Skin from "./skin.svg?react";
@@ -76,13 +76,13 @@ export {
   Eye,
   EyeOff,
   FileImage,
-  Filter,
   Gender,
   Image,
   Info,
   Locate,
   Logo,
   Logout,
+  Magnifier,
   Message,
   Money,
   Nurse,
@@ -94,11 +94,11 @@ export {
   Question,
   Redo,
   Rotate,
-  Search,
   Settings,
   Share,
   Skin,
   Smartphone,
+  Sort,
   Swap,
   Team,
   User,
