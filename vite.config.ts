@@ -1,14 +1,15 @@
 /// <reference types="vitest/config" />
-import { defineConfig } from "vite";
-import { extname, relative, resolve } from "path";
-import react from "@vitejs/plugin-react";
-import dts from "vite-plugin-dts";
-import svgr from "vite-plugin-svgr";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+
 import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
-import { libInjectCss } from "vite-plugin-lib-inject-css";
+import react from "@vitejs/plugin-react";
 import { glob } from "glob";
+import { extname, relative, resolve } from "path";
+import { defineConfig } from "vite";
+import dts from "vite-plugin-dts";
+import { libInjectCss } from "vite-plugin-lib-inject-css";
+import svgr from "vite-plugin-svgr";
 
 const dirname =
   typeof __dirname !== "undefined"
@@ -28,6 +29,12 @@ export default defineConfig({
       outDir: "dist",
     }),
   ],
+  resolve: {
+    alias: {
+      "@isskinui/icons": resolve(__dirname, "lib/icons/index.ts"),
+      "@isskinui/components": resolve(__dirname, "lib/components/index.ts"),
+    },
+  },
   build: {
     copyPublicDir: false,
     lib: {
@@ -39,7 +46,7 @@ export default defineConfig({
       input: (() => {
         const tsEntries = glob
           .sync("lib/**/*.{ts,tsx}", {
-            ignore: ["lib/**/*.d.ts", "lib/**/*.stories.ts"],
+            ignore: ["lib/**/*.d.ts", "lib/**/*.stories.ts", "lib/scripts/**"],
           })
           .map((file) => [
             relative("lib", file.slice(0, file.length - extname(file).length)),

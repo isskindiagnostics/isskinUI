@@ -1,7 +1,7 @@
 import { useLanguageStore } from "../../stores/languageStore";
-import styles from "./index.module.css";
-import PT from "../../stories/assets/pt.png";
 import EN from "../../stories/assets/en.png";
+import PT from "../../stories/assets/pt.png";
+import styles from "./index.module.css";
 
 export function LanguageSwitcher() {
   const { language, setLanguage } = useLanguageStore();

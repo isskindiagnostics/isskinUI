@@ -1,9 +1,11 @@
-import type { Preview } from "@storybook/react-vite";
 import "../lib/theme/theme.css";
-import "../lib/styles/fonts.css";
+import "../lib/styles/index.css";
+
+import type { Preview } from "@storybook/react-vite";
 
 const preview: Preview = {
   parameters: {
+    layout: "centered",
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -25,7 +27,7 @@ const preview: Preview = {
       // 'todo' - show a11y violations in the test UI only
       // 'error' - fail CI on a11y violations
       // 'off' - skip a11y checks entirely
-      test: "off",
+      test: "todo",
     },
   },
 };

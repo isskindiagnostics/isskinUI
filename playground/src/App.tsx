@@ -1,5 +1,5 @@
 import "../../lib/theme/theme.css";
-import "../../lib/styles/fonts.css";
+import "../../lib/styles/index.css";
 
 function App() {
   return <></>;

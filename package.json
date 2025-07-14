@@ -10,8 +10,9 @@
   "scripts": {
     "dev": "cd playground && vite",
     "build:tokens": "style-dictionary build --config lib/style-dictionary.config.js",
-    "build": "npm run build:tokens && node lib/scripts/buildNestedTokens.js && tsc --p ./tsconfig.lib.json && vite build",
+    "build": "npm run build:tokens && tsx lib/scripts/buildNestedTokens.ts && tsc --p ./tsconfig.lib.json && vite build",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "preview": "vite preview --config playground/vite.config.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -31,6 +32,7 @@
     "@storybook/builder-vite": "^9.0.14",
     "@storybook/react": "^9.0.14",
     "@storybook/react-vite": "^9.0.14",
+    "@storybook/testing-library": "^0.2.1",
     "@types/node": "^24.0.7",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
@@ -38,8 +40,10 @@
     "@vitest/browser": "^3.2.4",
     "@vitest/coverage-v8": "^3.2.4",
     "eslint": "^9.29.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
+    "eslint-plugin-regexp": "^2.9.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-storybook": "^9.0.14",
     "glob": "^11.0.3",
@@ -50,6 +54,7 @@
     "storybook": "^9.0.14",
     "style-dictionary": "^5.0.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.34.1",
     "vite": "^6.0.0",
@@ -67,6 +72,9 @@
     "@babel/core": "^7.27.7",
     "@svgr/core": "^6.5.1",
     "@svgr/plugin-jsx": "^6.5.1",
+    "radix-ui": "^1.4.2",
+    "react-datepicker": "^8.4.0",
+    "rollup-plugin-visualizer": "^6.0.3",
     "zustand": "^5.0.6"
   }
 }

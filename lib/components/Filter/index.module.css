@@ -1,0 +1,93 @@
+.wrapper {
+  position: relative;
+  width: max-content;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--typography-font-family-body);
+  font-size: var(--typography-button-desktop-font-size);
+  line-height: var(--typography-button-desktop-line-height);
+  color: var(--color-base-grey100);
+  padding: 8px 18px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid var(--color-base-grey100);
+  transition: ease-in-out 0.1s;
+  cursor: pointer;
+}
+
+.chip:hover {
+  box-shadow: inset 0 0 0 1px var(--color-base-grey100) !important;
+}
+
+.chip:focus-visible {
+  outline-offset: 3px;
+  outline: 2px solid var(--color-brand-black);
+}
+
+.chip:disabled {
+  border: 1px solid var(--color-functions-disabled);
+  color: var(--color-functions-disabled);
+  pointer-events: none;
+}
+
+.chip.selected {
+  border: 1px solid var(--color-brand-primary);
+  box-shadow: inset 0 0 0 2px var(--color-brand-primary);
+  color: var(--color-brand-primary);
+  background-color: var(--color-background-default);
+}
+
+.chip.selected:hover {
+  border-color: var(--color-base-blue100);
+  box-shadow: inset 0 0 0 2px var(--color-base-blue100);
+  color: var(--color-base-blue100);
+}
+
+.label {
+  font-weight: 600;
+  margin: 0;
+}
+
+.options {
+  position: absolute;
+  width: max-content;
+  margin: 0;
+  z-index: 10;
+  list-style: none;
+  padding: 0;
+  background-color: var(--color-brand-white);
+  border: 1px solid var(--color-base-grey300);
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-md);
+  margin: 8px 0;
+  transition: ease-in-out 0.1s;
+}
+
+.optionsItem {
+  font-family: var(--typography-font-family-body);
+  font-size: var(--typography-text-desktop-xl-font-size);
+  line-height: var(--typography-text-desktop-xl-line-height);
+  color: var(--color-brand-black);
+  border-radius: var(--radius-xs);
+  padding: 16px;
+  cursor: pointer;
+}
+
+.optionsItem:hover {
+  background-color: var(--color-base-grey400);
+}
+
+.icon {
+  width: 21px;
+  height: 21px;
+  color: var(--color-base-grey100);
+}
+
+.icon.disabled {
+  color: var(--color-functions-disabled);
+}

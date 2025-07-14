@@ -1,5 +1,6 @@
 import "./theme/theme.css";
-import "./styles/fonts.css";
+import "./styles/index.css";
 
-export * from "./theme/themeNested";
+export * from "./components/index";
 export * from "./icons/index";
+export * from "./theme/themeNested";

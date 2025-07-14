@@ -1,0 +1,156 @@
+p {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  width: 354px;
+  height: 213px;
+  padding: 17px;
+  border-radius: 20px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topItems {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.black,
+.grey,
+.blue {
+  font-family: var(--typography-font-family-body);
+  color: var(--color-brand-white);
+}
+
+.black {
+  background-color: var(--color-brand-black);
+}
+
+.grey {
+  background-color: var(--color-base-grey200);
+}
+
+.blue {
+  background-color: var(--color-base-blue400);
+  color: var(--color-brand-black);
+}
+
+.cardName {
+  font-size: var(--typography-action-desktop-xl-font-size);
+  line-height: var(--typography-action-desktop-xl-line-height);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 105px;
+}
+
+.black .iconLink,
+.grey .iconLink,
+.black .icon,
+.grey .icon {
+  color: var(--color-brand-white);
+}
+
+.black .iconLink:hover,
+.grey .iconLink:hover {
+  color: var(--color-base-blue300);
+}
+
+.blue .iconLink,
+.blue .icon {
+  color: var(--color-brand-black);
+}
+
+.black .badge,
+.grey .badge {
+  background-color: var(--color-brand-white);
+}
+
+.black .badge {
+  color: var(--color-brand-black);
+}
+
+.grey .badge {
+  color: var(--color-base-grey200);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 28px;
+}
+
+.rows {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rowBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rowtop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.circleContainer {
+  display: flex;
+  gap: 17px;
+}
+
+.circleGroup {
+  display: flex;
+  gap: 6px;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-brand-white);
+}
+
+.blue .circle {
+  background-color: var(--color-brand-black);
+}
+
+.text {
+  font-family: var(--typography-font-family-body);
+  font-size: var(--typography-text-desktop-lg-font-size);
+  line-height: var(--typography-action-mobile-lg-line-height);
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+}
+
+.grey .text,
+.black .text {
+  color: var(--color-brand-white);
+}
+
+.grey .cardFlag {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.blue .cardFlag {
+  background: rgba(26, 28, 30, 0.1);
+}
