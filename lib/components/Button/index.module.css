@@ -7,7 +7,9 @@
   border-radius: var(--radius-xs);
   font-weight: 600;
   text-transform: uppercase;
-  transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.1s;
+  -webkit-user-drag: none;
+  cursor: pointer;
 }
 
 .button:focus-visible {

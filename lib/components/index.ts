@@ -11,6 +11,7 @@ import InputField from "./InputField";
 import Link from "./Link";
 import Notification from "./Notification";
 import Pagination from "./Pagination";
+import PopUp from "./PopUp";
 import Radio from "./Radio";
 import Search from "./Search";
 import Select from "./Select";
@@ -32,6 +33,7 @@ export {
   Link,
   Notification,
   Pagination,
+  PopUp,
   Radio,
   Search,
   Select,

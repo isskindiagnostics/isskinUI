@@ -8,9 +8,12 @@ type ButtonProps = PropsWithChildren<
   }
 >;
 
-const Button = ({ variant, children, ...rest }: ButtonProps) => {
+const Button = ({ variant, className, children, ...rest }: ButtonProps) => {
   return (
-    <button className={`${styles.button} ${styles[variant]}`} {...rest}>
+    <button
+      className={`${styles.button} ${className} ${styles[variant]}`}
+      {...rest}
+    >
       {children}
     </button>
   );
