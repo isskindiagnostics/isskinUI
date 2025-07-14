@@ -14,6 +14,7 @@ import ChevronLeft from "./chevron-left.svg?react";
 import ChevronRight from "./chevron-right.svg?react";
 import ChevronUp from "./chevron-up.svg?react";
 import Close from "./close.svg?react";
+import Contactless from "./contactless.svg?react";
 import Doctor from "./doctor.svg?react";
 import Document from "./document.svg?react";
 import Edit from "./edit.svg?react";
@@ -66,6 +67,7 @@ export {
   ChevronRight,
   ChevronUp,
   Close,
+  Contactless,
   Doctor,
   Document,
   Edit,

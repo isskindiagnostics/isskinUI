@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 51px;
+  min-height: 34px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.4);
+}

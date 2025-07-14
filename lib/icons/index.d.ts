@@ -17,6 +17,7 @@ declare module "isskinui/icons" {
   export const ChevronRight: React.FC<React.SVGProps<SVGSVGElement>>;
   export const ChevronUp: React.FC<React.SVGProps<SVGSVGElement>>;
   export const Close: React.FC<React.SVGProps<SVGSVGElement>>;
+  export const Contactless: React.FC<React.SVGProps<SVGSVGElement>>;
   export const Doctor: React.FC<React.SVGProps<SVGSVGElement>>;
   export const Document: React.FC<React.SVGProps<SVGSVGElement>>;
   export const Edit: React.FC<React.SVGProps<SVGSVGElement>>;

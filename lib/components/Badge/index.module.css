@@ -1,0 +1,17 @@
+.badge {
+  width: max-content;
+  height: max-content;
+  padding: 5px 10px 3px;
+  border-radius: 30px;
+  background: var(--color-brand-black);
+  color: var(--color-brand-white);
+}
+
+.label {
+  font-family: var(--typography-font-family-body);
+  font-size: var(--typography-action-mobile-md-font-size);
+  line-height: var(--typography-action-mobile-md-line-height);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+}

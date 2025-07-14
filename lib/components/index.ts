@@ -1,4 +1,6 @@
+import Badge from "./Badge";
 import Button from "./Button";
+import Card from "./Card";
 import Checkbox from "./Checkbox";
 import Chip from "./Chip";
 import DatePicker from "./DatePicker";
@@ -15,7 +17,9 @@ import Switch from "./Switch";
 import Tooltip from "./Tooltip";
 
 export {
+  Badge,
   Button,
+  Card,
   Checkbox,
   Chip,
   DatePicker,
