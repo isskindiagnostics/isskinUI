@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import PopUp from "./index";
+
 import Image from "./door.png";
+import PopUp from "./index";
 
 const meta: Meta<typeof PopUp> = {
   title: "Components/PopUp",
