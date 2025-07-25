@@ -11,14 +11,14 @@ type CardImage = {
 };
 
 type HelpCardProps = HTMLAttributes<HTMLDivElement> &
-  PaginationProps & {
-    images: [CardImage] | [CardImage, CardImage];
+  Omit<PaginationProps, "onChange"> & {
+    images: CardImage[];
     title: string;
     text: string;
     buttonText: string;
     onButtonClick: () => void;
     onCardClose: () => void;
-    onPaginationChange: () => void;
+    onPaginationChange: (index: number) => void;
   };
 
 const HelpCard = ({
@@ -34,6 +34,10 @@ const HelpCard = ({
   className,
   ...rest
 }: HelpCardProps) => {
+  if (images.length < 1 || images.length > 2) {
+    throw new Error("HelpCard expects 1 or 2 images");
+  }
+
   return (
     <div className={`${styles.container} ${className}`} {...rest}>
       <Close
@@ -45,20 +49,17 @@ const HelpCard = ({
       <div className={styles.imagesContainer}>
         {images.map((img, i) => (
           <div className={styles.imgContainer} key={i}>
-            <img
-              className={styles.image}
-              src={img.src}
-              alt={img.alt || ""}
-            />
-            {i > 0 ? (
-              <div aria-hidden="true" className={styles.correct}>
-                <Check />
-              </div>
-            ) : (
-              <div aria-hidden="true" className={styles.incorrect}>
-                <Close />
-              </div>
-            )}
+            <img className={styles.image} src={img.src} alt={img.alt || ""} />
+            {images.length > 1 &&
+              (i > 0 ? (
+                <div aria-hidden="true" className={styles.correct}>
+                  <Check />
+                </div>
+              ) : (
+                <div aria-hidden="true" className={styles.incorrect}>
+                  <Close />
+                </div>
+              ))}
           </div>
         ))}
       </div>

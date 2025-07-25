@@ -36,6 +36,7 @@
   font-size: var(--typography-text-desktop-xl-font-size);
   color: var(--color-brand-black);
   font-weight: 300;
+  height: 50px;
 }
 
 .input:hover,
