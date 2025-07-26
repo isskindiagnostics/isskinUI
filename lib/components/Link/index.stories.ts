@@ -19,6 +19,13 @@ const meta: Meta<typeof Link> = {
       defaultValue: "#",
       description: "Destination URL of the link.",
     },
+    renderAs: {
+      control: { type: "select" },
+      options: ["link", "button"],
+      defaultValue: "link",
+      description:
+        "Choose whether the component renders as a `<link>` (Next.js Link) or a `<button>` element.",
+    },
   },
 };
 
@@ -30,6 +37,8 @@ export const Default: Story = {
   args: {
     children: "Go to next page",
     variant: "strong",
-    href: "#",
+    renderAs: "link",
+    href: "https://isskindiagnostics.com/",
+    target: "_blank",
   },
 };
