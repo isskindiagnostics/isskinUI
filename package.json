@@ -1,12 +1,17 @@
 {
   "name": "isskinui",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": "./dist/main.js",
+    "./icons": "./dist/icons/index.js",
+    "./components": "./dist/components/index.js"
+  },
   "scripts": {
     "dev": "cd playground && vite",
     "build:tokens": "style-dictionary build --config lib/style-dictionary.config.js",
