@@ -1,7 +1,7 @@
 .container {
   position: relative;
   width: 486px;
-  height: 575px;
+  height: 514px;
   border-radius: 16px;
   overflow: hidden;
   background-color: var(--color-brand-white);
@@ -67,8 +67,9 @@
 
 .content {
   display: flex;
+  height: 249px;
   flex-direction: column;
-  gap: 32px;
+  justify-content: space-between;
   padding: 23px;
 }
 

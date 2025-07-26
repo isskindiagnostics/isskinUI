@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import FormCard from "./index";
 import { IconsArray } from "../../types/icons";
+import FormCard from "./index";
 
 const meta: Meta<typeof FormCard> = {
   title: "Components/FormCard",

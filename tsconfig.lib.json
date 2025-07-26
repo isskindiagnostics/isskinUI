@@ -12,5 +12,5 @@
       "@isskinui/theme": ["lib/theme/themeNested.ts"],
     }
   },
-  "include": ["lib", "lib/types/svg.d.ts"]
+  "include": ["lib", "lib/types/svg.d.ts", "lib/types"]
 }

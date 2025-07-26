@@ -296,10 +296,10 @@
                 },
                 "xl": {
                     "fontSize": {
-                        "value": "18px"
+                        "value": "17px"
                     },
                     "lineHeight": {
-                        "value": "28px"
+                        "value": "26px"
                     }
                 },
                 "lg": {

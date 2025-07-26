@@ -20,14 +20,21 @@ const dirname =
 export default defineConfig({
   plugins: [
     react(),
-    libInjectCss(),
-    svgr(),
+    svgr({
+      svgrOptions: {
+        icon: true,
+        svgProps: {
+          fill: "currentColor",
+        },
+      },
+    }),
     dts({
       tsconfigPath: "./tsconfig.lib.json",
       include: ["lib"],
       exclude: ["**/*.stories.ts"],
       outDir: "dist",
     }),
+    libInjectCss(),
   ],
   resolve: {
     alias: {

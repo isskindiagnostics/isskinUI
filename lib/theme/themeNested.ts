@@ -186,8 +186,8 @@ export const theme = {
           "lineHeight": "32px"
         },
         "xl": {
-          "fontSize": "18px",
-          "lineHeight": "28px"
+          "fontSize": "17px",
+          "lineHeight": "26px"
         },
         "lg": {
           "fontSize": "15px",
