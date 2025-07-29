@@ -1,30 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+// rework this story
 import Search from "./index";
-
-const suggestions = [
-  "Apple",
-  "Apricot",
-  "Avocado",
-  "Banana",
-  "Blackberry",
-  "Blueberry",
-  "Boysenberry",
-  "Cherry",
-  "Cantaloupe",
-  "Clementine",
-  "Cranberry",
-  "Date",
-  "Dragonfruit",
-  "Durian",
-  "Elderberry",
-  "Eggfruit",
-  "Fig",
-  "Feijoa",
-  "Grape",
-  "Grapefruit",
-  "Guava",
-];
 
 const meta: Meta<typeof Search> = {
   title: "Components/Search",
@@ -35,11 +12,6 @@ const meta: Meta<typeof Search> = {
       control: "text",
       defaultValue: "Search fruits...",
       description: "Placeholder text for the input field.",
-    },
-    suggestions: {
-      control: { type: "object" },
-      options: suggestions,
-      description: "List of suggestions to show in the dropdown.",
     },
     width: {
       control: "text",
@@ -56,7 +28,6 @@ type Story = StoryObj<typeof Search>;
 export const Default: Story = {
   args: {
     placeholder: "Search",
-    suggestions: suggestions,
     width: "446px",
   },
 };

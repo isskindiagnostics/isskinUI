@@ -9,43 +9,61 @@ import {
 
 import styles from "./index.module.css";
 
-export type SearchProps = InputHTMLAttributes<HTMLInputElement> & {
-  suggestions: string[];
+type Suggestion = {
+  label: string;
+  value: string;
+};
+
+export type SearchProps = Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "onChange"
+> & {
+  getSuggestions: (input: string) => Promise<Suggestion[]>;
   onSuggestionSelect: (value: string) => void;
+  onSearch: (input: string) => void;
   placeholder?: string;
   width?: CSSProperties["width"];
   closeAriaLabel?: string;
 };
 
 const Search = ({
-  suggestions,
+  getSuggestions,
   onSuggestionSelect,
+  onSearch,
   placeholder,
   width,
   closeAriaLabel,
   ...rest
 }: SearchProps) => {
   const [inputValue, setInputValue] = useState<string>("");
-  const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
+  const [filteredSuggestions, setFilteredSuggestions] = useState<
+    { label: string; value: string }[]
+  >([]);
   const [showSuggestions, setShowSuggestions] = useState<boolean>(false);
   const [isInputFocused, setIsInputFocused] = useState<boolean>(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    let active = true;
+
     if (inputValue.trim() === "") {
       setFilteredSuggestions([]);
       setShowSuggestions(false);
       return;
     }
 
-    const filtered = suggestions.filter((s) =>
-      s.toLowerCase().includes(inputValue.toLowerCase()),
-    );
+    getSuggestions(inputValue).then((results) => {
+      if (active) {
+        setFilteredSuggestions(results);
+        setShowSuggestions(results.length > 0);
+      }
+    });
 
-    setFilteredSuggestions(filtered);
-    setShowSuggestions(filtered.length > 0);
-  }, [inputValue, suggestions]);
+    return () => {
+      active = false;
+    };
+  }, [inputValue, getSuggestions]);
 
   // Close suggestions when clicking outside - onBlur would not work (the <input> loses focus before the onClick handler on the <li> fires — causing the suggestions list to disappear and the input not to update correctly)
   useEffect(() => {
@@ -62,74 +80,83 @@ const Search = ({
   }, []);
 
   return (
-    <div
-      className={`${styles.container} ${isInputFocused && styles.focused}`}
-      ref={containerRef}
-      style={{
-        width,
-        boxShadow: showSuggestions ? "var(--shadow-md)" : undefined,
-      }}
-    >
-      <div className={styles.inputWrapper}>
-        <Magnifier className={styles.searchIcon} aria-hidden="true" />
-        <input
-          id={rest.id ?? "search-input"}
-          name={rest.name ?? "search"}
-          type="text"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          placeholder={placeholder}
-          className={styles.input}
-          onFocus={() => {
-            if (filteredSuggestions.length > 0) setShowSuggestions(true);
-            setIsInputFocused(true);
-          }}
-          onBlur={() => setIsInputFocused(false)}
-          role="combobox"
-          aria-autocomplete="list"
-          autoComplete="off"
-          aria-controls="search-suggestion-list"
-          aria-expanded={showSuggestions}
-          {...rest}
-        />
-        <div className={styles.closeIcon}>
-          {inputValue.length > 0 && isInputFocused && (
-            <Close
-              className={styles.closeIcon}
-              onMouseDown={(e) => {
+    <div className={styles.positioner}>
+      <div
+        className={`${styles.container} ${isInputFocused && styles.focused}`}
+        ref={containerRef}
+        style={{
+          width,
+          boxShadow: showSuggestions ? "var(--shadow-md)" : undefined,
+        }}
+      >
+        <div className={styles.inputWrapper}>
+          <Magnifier className={styles.searchIcon} aria-hidden="true" />
+          <input
+            id={rest.id ?? "search-input"}
+            name={rest.name ?? "search"}
+            type="text"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            placeholder={placeholder}
+            className={styles.input}
+            onFocus={() => {
+              if (filteredSuggestions.length > 0) setShowSuggestions(true);
+              setIsInputFocused(true);
+            }}
+            onBlur={() => setIsInputFocused(false)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
                 e.preventDefault();
-                setInputValue("");
-              }}
-              aria-label={closeAriaLabel}
-            />
-          )}
+                setShowSuggestions(false);
+                onSearch(inputValue);
+              }
+            }}
+            role="combobox"
+            aria-autocomplete="list"
+            autoComplete="off"
+            aria-controls="search-suggestion-list"
+            aria-expanded={showSuggestions}
+            {...rest}
+          />
+          <div className={styles.closeIcon}>
+            {inputValue.length > 0 && isInputFocused && (
+              <Close
+                className={styles.closeIcon}
+                onMouseDown={(e) => {
+                  e.preventDefault();
+                  setInputValue("");
+                }}
+                aria-label={closeAriaLabel}
+              />
+            )}
+          </div>
         </div>
+
+        {showSuggestions && <div className={styles.divider}></div>}
+
+        {showSuggestions && (
+          <ul
+            id="search-suggestion-list"
+            className={styles.suggestions}
+            role="listbox"
+          >
+            {filteredSuggestions.map((suggestion, idx) => (
+              <li
+                key={idx}
+                className={styles.suggestionItem}
+                onClick={() => {
+                  onSuggestionSelect(suggestion.value);
+                  setInputValue("");
+                  setTimeout(() => setShowSuggestions(false), 0); // This lets the DOM update the input value and re-render before hiding the list
+                }}
+                role="option"
+              >
+                {suggestion.label}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
-
-      {showSuggestions && <div className={styles.divider}></div>}
-
-      {showSuggestions && (
-        <ul
-          id="search-suggestion-list"
-          className={styles.suggestions}
-          role="listbox"
-        >
-          {filteredSuggestions.map((suggestion, idx) => (
-            <li
-              key={idx}
-              className={styles.suggestionItem}
-              onClick={() => {
-                onSuggestionSelect(suggestion);
-                setInputValue(suggestion);
-                setTimeout(() => setShowSuggestions(false), 0); // This lets the DOM update the input value and re-render before hiding the list
-              }}
-              role="option"
-            >
-              {suggestion}
-            </li>
-          ))}
-        </ul>
-      )}
     </div>
   );
 };
