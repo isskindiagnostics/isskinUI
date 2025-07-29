@@ -10,8 +10,11 @@ import {
 import styles from "./index.module.css";
 
 type Suggestion = {
-  label: string;
   value: string;
+  body: {
+    protocol: string;
+    name: string;
+  };
 };
 
 export type SearchProps = Omit<
@@ -20,7 +23,7 @@ export type SearchProps = Omit<
 > & {
   getSuggestions: (input: string) => Promise<Suggestion[]>;
   onSuggestionSelect: (value: string) => void;
-  onSearch: (input: string) => void;
+  onSearch?: (input: string) => void;
   placeholder?: string;
   width?: CSSProperties["width"];
   closeAriaLabel?: string;
@@ -36,9 +39,9 @@ const Search = ({
   ...rest
 }: SearchProps) => {
   const [inputValue, setInputValue] = useState<string>("");
-  const [filteredSuggestions, setFilteredSuggestions] = useState<
-    { label: string; value: string }[]
-  >([]);
+  const [filteredSuggestions, setFilteredSuggestions] = useState<Suggestion[]>(
+    [],
+  );
   const [showSuggestions, setShowSuggestions] = useState<boolean>(false);
   const [isInputFocused, setIsInputFocused] = useState<boolean>(false);
 
@@ -105,10 +108,12 @@ const Search = ({
             }}
             onBlur={() => setIsInputFocused(false)}
             onKeyDown={(e) => {
-              if (e.key === "Enter") {
+              if (e.key === "Enter" && onSearch) {
                 e.preventDefault();
                 setShowSuggestions(false);
-                onSearch(inputValue);
+                if (onSearch) {
+                  onSearch(inputValue);
+                }
               }
             }}
             role="combobox"
@@ -151,7 +156,12 @@ const Search = ({
                 }}
                 role="option"
               >
-                {suggestion.label}
+                <p className={styles.suggestionItemProtocol}>
+                  {suggestion.body.protocol}
+                </p>
+                <p className={styles.suggestionItemName}>
+                  {suggestion.body.name}
+                </p>
               </li>
             ))}
           </ul>

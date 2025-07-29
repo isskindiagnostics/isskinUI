@@ -99,8 +99,25 @@
   border-radius: var(--radius-xs);
   padding: 16px;
   cursor: pointer;
+  display: flex;
 }
 
 .suggestionItem:hover {
   background-color: var(--color-base-grey400);
+}
+
+.suggestionItemProtocol {
+  font-size: var(--typography-text-desktop-lg-font-size);
+  color: var(--color-base-grey200);
+  font-weight: 600;
+  margin: 0;
+  width: 100px;
+}
+
+.suggestionItemName {
+  width: 100%;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
