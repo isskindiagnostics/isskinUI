@@ -111,7 +111,7 @@
   color: var(--color-base-grey200);
   font-weight: 600;
   margin: 0;
-  width: 100px;
+  min-width: 95px;
 }
 
 .suggestionItemName {
