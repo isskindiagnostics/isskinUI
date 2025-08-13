@@ -14,7 +14,7 @@
   line-height: var(--typography-action-desktop-lg-line-height);
   font-weight: 600;
   text-decoration: none;
-  transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.2s;
   border: none;
   background-color: transparent;
   cursor: pointer;

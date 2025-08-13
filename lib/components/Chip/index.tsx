@@ -1,26 +1,30 @@
-import { type ButtonHTMLAttributes, useState } from "react";
+import { type ButtonHTMLAttributes } from "react";
 
 import styles from "./index.module.css";
 
 type ChipProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   label: string;
-  onSelect?: () => void;
+  selected: boolean;
+  onSelect: () => void;
 };
 
-const Chip = ({ label, onSelect, disabled, ...rest }: ChipProps) => {
-  const [selected, setSelected] = useState<boolean>(false);
-
+const Chip = ({
+  label,
+  selected = false,
+  onSelect,
+  disabled,
+  ...rest
+}: ChipProps) => {
   return (
     <button
       className={`${styles.chip} ${selected && styles.selected}`}
       disabled={disabled}
-      onClick={() => {
-        setSelected(!selected);
-        if (onSelect) onSelect();
-      }}
+      onClick={onSelect}
       {...rest}
     >
-      <p className={`${styles.label} ${disabled && styles.disabled}`}>
+      <p
+        className={`${styles.label} ${selected && styles.labelSelected} ${disabled && styles.disabled}`}
+      >
         {label}
       </p>
     </button>

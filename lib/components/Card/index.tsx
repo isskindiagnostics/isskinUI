@@ -2,8 +2,8 @@ import { Contactless } from "@isskinui/icons";
 import type { HTMLAttributes } from "react";
 
 import Badge from "../Badge";
+import CardFlag, { type Flag } from "../CardFlag";
 import IconLink from "../IconLink";
-import CardFlag, { type Flag } from "./CardFlag";
 import styles from "./index.module.css";
 
 type CardProps = HTMLAttributes<HTMLDivElement> & {
@@ -35,7 +35,7 @@ const Card = ({
   return (
     <div className={`${styles.card} ${className} ${styles[variant]}`} {...rest}>
       <div className={styles.top}>
-        <p className={styles.cardName}>{cardName.split(" ")[0]}</p>
+        <span className={styles.cardName}>{cardName.split(" ")[0]}</span>
         <div className={styles.topItems}>
           <IconLink
             icon="Edit"

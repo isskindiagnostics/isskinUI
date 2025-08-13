@@ -36,6 +36,7 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
       iconOnClick,
       disabled,
       width,
+      className,
       ...rest
     },
     ref,
@@ -46,7 +47,7 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
 
     return (
       <div
-        className={`${styles.wrapper} ${disabled && styles.disabled}`}
+        className={`${styles.wrapper} ${disabled && styles.disabled} ${className}`}
         style={{ width }}
       >
         <label htmlFor={inputId} className={styles.label}>

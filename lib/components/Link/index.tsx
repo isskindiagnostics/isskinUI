@@ -9,13 +9,18 @@ import styles from "./index.module.css";
 type LinkProps = PropsWithChildren<
   (
     | (ButtonHTMLAttributes<HTMLButtonElement> & { renderAs?: "button" })
-    | (AnchorHTMLAttributes<HTMLAnchorElement> & { renderAs: "link" })
+    | (AnchorHTMLAttributes<HTMLAnchorElement> & { renderAs?: "link" })
   ) & {
-    variant: "strong" | "underlined";
+    variant?: "strong" | "underlined";
   }
 >;
 
-const Link = ({ variant, renderAs, children, ...rest }: LinkProps) => {
+const Link = ({
+  variant = "underlined",
+  renderAs = "link",
+  children,
+  ...rest
+}: LinkProps) => {
   if (renderAs === "button") {
     return (
       <button

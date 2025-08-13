@@ -1,3 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.label {
+  font-family: var(--typography-font-family-body);
+  font-size: var(--typography-action-desktop-lg-font-size);
+  line-height: var(--typography-action-desktop-lg-line-height);
+  color: var(--color-brand-black);
+}
+
 .toggle {
   border: none;
   width: 44px;
@@ -5,6 +18,7 @@
   padding: 2px;
   border-radius: 50px;
   cursor: pointer;
+  transition: ease-in-out 0.2s;
 }
 
 .toggleOff {
@@ -33,7 +47,7 @@
   height: 14px;
   background-color: var(--color-brand-black);
   border-radius: 50%;
-  transition: transform 0.2s ease;
+  transition: ease-in-out 0.2s;
 }
 
 .toggleOff .thumb {

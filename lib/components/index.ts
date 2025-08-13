@@ -1,6 +1,7 @@
 import Badge from "./Badge";
 import Button from "./Button";
 import Card from "./Card";
+import CardFlag from "./CardFlag";
 import Checkbox from "./Checkbox";
 import Chip from "./Chip";
 import DatePicker from "./DatePicker";
@@ -23,6 +24,7 @@ export {
   Badge,
   Button,
   Card,
+  CardFlag,
   Checkbox,
   Chip,
   DatePicker,

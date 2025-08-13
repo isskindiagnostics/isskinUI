@@ -1,4 +1,5 @@
 .button {
+  width: max-content;
   border: none;
   padding: 8px 20px;
   font-family: var(--typography-font-family-body);
@@ -7,7 +8,7 @@
   border-radius: var(--radius-xs);
   font-weight: 600;
   text-transform: uppercase;
-  transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.2s;
   -webkit-user-drag: none;
   cursor: pointer;
 }

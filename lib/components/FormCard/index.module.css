@@ -12,7 +12,7 @@
   background-color: transparent;
   border: 1px solid var(--color-brand-primary);
   text-align: center;
-  transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.2s;
   cursor: pointer;
 }
 

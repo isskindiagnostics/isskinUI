@@ -28,7 +28,7 @@
   padding: 14px 16px;
   border-radius: var(--radius-xs);
   border: 1px solid var(--color-base-grey100);
-  transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.2s;
   font-weight: 300;
   cursor: pointer;
   background-color: transparent;

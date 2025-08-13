@@ -28,7 +28,7 @@
   border: 1px solid var(--color-base-grey100);
   padding: 14px 16px;
   width: 100%;
-  transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.2s;
 }
 
 .inputError {
@@ -168,7 +168,7 @@ label,
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.2s;
 }
 
 :global(.react-datepicker__day--outside-month) {
