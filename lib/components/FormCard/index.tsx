@@ -1,33 +1,33 @@
 import * as Icon from "@isskinui/icons";
 import type { Icons } from "lib/types/icons";
-import { type ButtonHTMLAttributes,useState } from "react";
+import { type ButtonHTMLAttributes } from "react";
 
 import styles from "./index.module.css";
 
 type FormCardProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   icon: Icons;
   description: string;
+  selected?: boolean;
   onSelect?: () => void;
 };
 
 const FormCard = ({
   icon,
   description,
+  selected = false,
   onSelect,
   disabled,
+  type = "button",
   ...rest
 }: FormCardProps) => {
   const IconComponent = Icon[icon];
-  const [selected, setSelected] = useState<boolean>(false);
 
   return (
     <button
       className={`${styles.card} ${selected && styles.selected} ${disabled && styles.disabled}`}
       disabled={disabled}
-      onClick={() => {
-        setSelected(!selected);
-        if (onSelect) onSelect();
-      }}
+      onClick={onSelect}
+      type={type}
       {...rest}
     >
       <div className={styles.iconWrapper}>

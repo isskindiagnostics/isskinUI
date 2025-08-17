@@ -1,12 +1,27 @@
 import "../../lib/theme/theme.css";
 import "../../lib/styles/index.css";
 
-import Link from "../../lib/components/Link";
+import FormCard from "../../lib/components/FormCard";
 
 function App() {
   return (
     <>
-      <Link>Termos e Condições</Link>
+      <FormCard
+        icon={"Pipette"}
+        description={"Hi"}
+        selected={true}
+        // style={{ marginBottom: 10 }}
+      />
+      <FormCard
+        icon={"Pipette"}
+        description={"Hi"}
+        style={{ marginBottom: 10 }}
+      />
+      <FormCard
+        icon={"Pipette"}
+        description={"Hi"}
+        style={{ marginBottom: 10 }}
+      />
     </>
   );
 }

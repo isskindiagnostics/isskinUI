@@ -48,10 +48,19 @@
   box-shadow: inset 0 0 0 1px var(--color-brand-primary);
 }
 
+.selected {
+  background-color: #f8feff;
+}
+
 .selected:hover {
   box-shadow: inset 0 0 0 1px var(--color-base-blue100);
   border-color: var(--color-base-blue100);
 }
+
+.selected:active {
+  box-shadow: inset 0 0 0 2px var(--color-base-blue100);
+}
+
 .icon {
   width: 24px;
   height: 24px;
