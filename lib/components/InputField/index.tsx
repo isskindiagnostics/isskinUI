@@ -53,6 +53,9 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
         <label htmlFor={inputId} className={styles.label}>
           {label}
         </label>
+
+        {label === "" && <div style={{ height: 14 }}></div>}
+
         <input
           ref={ref}
           type={type}

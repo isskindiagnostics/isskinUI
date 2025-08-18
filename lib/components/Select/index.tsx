@@ -43,6 +43,8 @@ const Select = ({
         {label}
       </label>
 
+      {label === "" && <div style={{ height: 14 }}></div>}
+
       <RadixSelect.Root
         value={value}
         onValueChange={onValueChange}
