@@ -5,12 +5,12 @@ import Button from "../Button";
 import Pagination, { type PaginationProps } from "../Pagination";
 import styles from "./index.module.css";
 
-type CardImage = {
+export type CardImage = {
   src: string;
   alt?: string;
 };
 
-type HelpCardProps = HTMLAttributes<HTMLDivElement> &
+export type HelpCardProps = HTMLAttributes<HTMLDivElement> &
   Omit<PaginationProps, "onChange"> & {
     images: CardImage[];
     title: string;

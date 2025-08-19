@@ -1,5 +1,5 @@
 import * as Icon from "@isskinui/icons";
-import type { Icons } from "lib/types/icons";
+import type { Icons } from "lib/icons";
 import type {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,

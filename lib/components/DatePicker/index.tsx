@@ -13,7 +13,7 @@ import ReactDatePicker from "react-datepicker";
 import HeaderDatePicker from "./Header";
 import styles from "./index.module.css";
 
-type DatePickerProps = {
+export type DatePickerProps = {
   id?: string;
   label?: string;
   errorMessage?: string;

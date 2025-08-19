@@ -1,6 +1,6 @@
+import { IconsArray } from "@isskinui/icons";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { IconsArray } from "../../types/icons";
 import Tooltip from "./index";
 
 const meta: Meta<typeof Tooltip> = {

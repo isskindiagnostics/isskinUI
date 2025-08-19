@@ -2,7 +2,7 @@ import { type ButtonHTMLAttributes } from "react";
 
 import styles from "./index.module.css";
 
-type ChipProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+export type ChipProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   label: string;
   selected: boolean;
   onSelect: () => void;

@@ -30,9 +30,11 @@ export default defineConfig({
     }),
     dts({
       tsconfigPath: "./tsconfig.lib.json",
-      include: ["lib"],
-      exclude: ["**/*.stories.ts"],
+      include: ["lib/**/*"],
+      exclude: ["**/*.stories.*", "**/*.test.*", "**/*.spec.*"],
       outDir: "dist",
+      insertTypesEntry: true,
+      rollupTypes: true,
     }),
     libInjectCss(),
   ],

@@ -1,5 +1,5 @@
 import * as Icon from "@isskinui/icons";
-import type { Icons } from "lib/types/icons";
+import type { Icons } from "lib/icons";
 import {
   type CSSProperties,
   forwardRef,
@@ -10,7 +10,7 @@ import {
 
 import styles from "./index.module.css";
 
-type InputFieldProps = PropsWithChildren<
+export type InputFieldProps = PropsWithChildren<
   InputHTMLAttributes<HTMLInputElement> & {
     label: string;
     hint?: string;

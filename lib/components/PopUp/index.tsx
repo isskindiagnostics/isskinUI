@@ -3,13 +3,13 @@ import type { CSSProperties, HTMLAttributes } from "react";
 import Button from "../Button";
 import styles from "./index.module.css";
 
-type PopUpButtonProps = {
+export type PopUpButtonProps = {
   label: string;
   onClick?: () => void;
   disabled?: boolean;
 };
 
-type PopUpProps = HTMLAttributes<HTMLDivElement> & {
+export type PopUpProps = HTMLAttributes<HTMLDivElement> & {
   title: string;
   text: string;
   primaryButton: PopUpButtonProps;

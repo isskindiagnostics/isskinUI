@@ -4,7 +4,7 @@ import type { IconLinkProps } from "../IconLink";
 import IconLink from "../IconLink";
 import styles from "./index.module.css";
 
-type TooltipProps = HTMLAttributes<HTMLDivElement> &
+export type TooltipProps = HTMLAttributes<HTMLDivElement> &
   IconLinkProps & {
     text: string;
     href?: string;

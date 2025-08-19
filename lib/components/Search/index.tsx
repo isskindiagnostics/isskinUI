@@ -9,7 +9,7 @@ import {
 
 import styles from "./index.module.css";
 
-type Suggestion = {
+export type Suggestion = {
   value: string;
   body: {
     protocol: string;

@@ -2,7 +2,7 @@ import { type InputHTMLAttributes, useId } from "react";
 
 import styles from "./index.module.css";
 
-type CheckboxProps = InputHTMLAttributes<HTMLInputElement> & {
+export type CheckboxProps = InputHTMLAttributes<HTMLInputElement> & {
   label: string;
 };
 

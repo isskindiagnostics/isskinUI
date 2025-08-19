@@ -4,7 +4,7 @@ import { Error } from "@isskinui/icons";
 
 import styles from "./index.module.css";
 
-type NotificationProps = {
+export type NotificationProps = {
   type: "general" | "success" | "warning" | "error";
   label: string;
 };

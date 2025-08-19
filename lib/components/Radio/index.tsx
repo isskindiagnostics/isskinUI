@@ -2,7 +2,7 @@ import { type InputHTMLAttributes, useId } from "react";
 
 import styles from "./index.module.css";
 
-type RadioProps = InputHTMLAttributes<HTMLInputElement> & {
+export type RadioProps = InputHTMLAttributes<HTMLInputElement> & {
   label: string;
 };
 

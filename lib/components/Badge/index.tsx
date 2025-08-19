@@ -2,7 +2,7 @@ import type { HTMLAttributes } from "react";
 
 import styles from "./index.module.css";
 
-type BadgeProps = HTMLAttributes<HTMLDivElement> & {
+export type BadgeProps = HTMLAttributes<HTMLDivElement> & {
   label: string;
   className?: string;
 };

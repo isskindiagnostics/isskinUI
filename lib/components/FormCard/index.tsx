@@ -1,10 +1,10 @@
 import * as Icon from "@isskinui/icons";
-import type { Icons } from "lib/types/icons";
+import type { Icons } from "lib/icons";
 import { type ButtonHTMLAttributes } from "react";
 
 import styles from "./index.module.css";
 
-type FormCardProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+export type FormCardProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   icon: Icons;
   description: string;
   selected?: boolean;

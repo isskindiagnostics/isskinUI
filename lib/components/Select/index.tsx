@@ -9,7 +9,7 @@ export type SelectOption = {
   value: string;
 };
 
-type SelectProps = {
+export type SelectProps = {
   label: string;
   options: SelectOption[];
   value: string;

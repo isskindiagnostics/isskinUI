@@ -1,47 +1,44 @@
-import Badge from "./Badge";
-import Button from "./Button";
-import Card from "./Card";
-import CardFlag from "./CardFlag";
-import Checkbox from "./Checkbox";
-import Chip from "./Chip";
-import DatePicker from "./DatePicker";
-import Filter from "./Filter";
-import FormCard from "./FormCard";
-import HelpCard from "./HelpCard";
-import IconLink from "./IconLink";
-import InputField from "./InputField";
-import Link from "./Link";
-import Notification from "./Notification";
-import Pagination from "./Pagination";
-import PopUp from "./PopUp";
-import Radio from "./Radio";
-import Search from "./Search";
-import Select from "./Select";
-import StepNavigation from "./StepNavigation";
-import Switch from "./Switch";
-import Tooltip from "./Tooltip";
-
-export {
-  Badge,
-  Button,
-  Card,
-  CardFlag,
-  Checkbox,
-  Chip,
-  DatePicker,
-  Filter,
-  FormCard,
-  HelpCard,
-  IconLink,
-  InputField,
-  Link,
-  Notification,
-  Pagination,
-  PopUp,
-  Radio,
-  Search,
-  Select,
-  StepNavigation,
-  Switch,
-  Tooltip,
-};
+export * from "./Badge";
+export { default as Badge } from "./Badge";
+export * from "./Button";
+export { default as Button } from "./Button";
+export * from "./Card";
+export { default as Card } from "./Card";
+export * from "./CardFlag";
+export { default as CardFlag } from "./CardFlag";
+export * from "./Checkbox";
+export { default as Checkbox } from "./Checkbox";
+export * from "./Chip";
+export { default as Chip } from "./Chip";
+export * from "./DatePicker";
+export { default as DatePicker } from "./DatePicker";
+export * from "./Filter";
+export { default as Filter } from "./Filter";
+export * from "./FormCard";
+export { default as FormCard } from "./FormCard";
+export * from "./HelpCard";
+export { default as HelpCard } from "./HelpCard";
+export * from "./IconLink";
+export { default as IconLink } from "./IconLink";
+export * from "./InputField";
+export { default as InputField } from "./InputField";
+export * from "./Link";
+export { default as Link } from "./Link";
+export * from "./Notification";
+export { default as Notification } from "./Notification";
+export * from "./Pagination";
+export { default as Pagination } from "./Pagination";
+export * from "./PopUp";
+export { default as PopUp } from "./PopUp";
+export * from "./Radio";
+export { default as Radio } from "./Radio";
+export * from "./Search";
+export { default as Search } from "./Search";
+export * from "./Select";
+export { default as Select } from "./Select";
+export * from "./StepNavigation";
+export { default as StepNavigation } from "./StepNavigation";
+export * from "./Switch";
+export { default as Switch } from "./Switch";
+export * from "./Tooltip";
+export { default as Tooltip } from "./Tooltip";

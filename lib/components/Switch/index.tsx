@@ -2,7 +2,7 @@ import type { ButtonHTMLAttributes } from "react";
 
 import styles from "./index.module.css";
 
-type SwitchProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+export type SwitchProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   toggle: boolean;
   label?: string;
   labelPositon?: "left" | "right";

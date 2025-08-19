@@ -3,7 +3,7 @@ import { type ButtonHTMLAttributes, useEffect, useRef, useState } from "react";
 
 import styles from "./index.module.css";
 
-type FilterProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+export type FilterProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   options: string[];
   onOptionSelect: (value: string | null) => void;
   placeholder: string;

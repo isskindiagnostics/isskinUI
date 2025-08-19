@@ -6,7 +6,7 @@ import CardFlag, { type Flag } from "../CardFlag";
 import IconLink from "../IconLink";
 import styles from "./index.module.css";
 
-type CardProps = HTMLAttributes<HTMLDivElement> & {
+export type CardProps = HTMLAttributes<HTMLDivElement> & {
   cardName: string;
   cardHolder: string;
   cardNumber: string | number;

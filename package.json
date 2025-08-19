@@ -1,6 +1,6 @@
 {
   "name": "isskinui",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
@@ -8,9 +8,18 @@
     "dist"
   ],
   "exports": {
-    ".": "./dist/main.js",
-    "./icons": "./dist/icons/index.js",
-    "./components": "./dist/components/index.js",
+    ".": {
+      "import": "./dist/main.js",
+      "types": "./dist/main.d.ts"
+    },
+    "./components": {
+      "import": "./dist/components/index.js",
+      "types": "./dist/components/index.d.ts"
+    },
+    "./icons": {
+      "import": "./dist/icons/index.js",
+      "types": "./dist/icons/index.d.ts"
+    },
     "./css": "./dist/assets/main.css"
   },
   "scripts": {

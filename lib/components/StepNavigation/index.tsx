@@ -2,7 +2,7 @@ import type { CSSProperties } from "react";
 
 import styles from "./index.module.css";
 
-type StepNavigationProps = {
+export type StepNavigationProps = {
   total: number;
   current: number;
   onChange: (number: number) => void;

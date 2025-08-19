@@ -2,7 +2,7 @@ import type { ButtonHTMLAttributes, PropsWithChildren } from "react";
 
 import styles from "./index.module.css";
 
-type ButtonProps = PropsWithChildren<
+export type ButtonProps = PropsWithChildren<
   ButtonHTMLAttributes<HTMLButtonElement> & {
     variant: "solid" | "outlined";
   }

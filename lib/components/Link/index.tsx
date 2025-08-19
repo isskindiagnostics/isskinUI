@@ -6,7 +6,7 @@ import type {
 
 import styles from "./index.module.css";
 
-type LinkProps = PropsWithChildren<
+export type LinkProps = PropsWithChildren<
   (
     | (ButtonHTMLAttributes<HTMLButtonElement> & { renderAs?: "button" })
     | (AnchorHTMLAttributes<HTMLAnchorElement> & { renderAs?: "link" })
