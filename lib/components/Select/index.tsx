@@ -66,7 +66,7 @@ const Select = ({
             className={styles.optionsWrapper}
             position="popper"
             side="bottom"
-            style={{ width }}
+            style={{ width: "var(--radix-select-trigger-width)" }}
           >
             <RadixSelect.ScrollUpButton className={styles.scrollButton}>
               <ChevronUp />

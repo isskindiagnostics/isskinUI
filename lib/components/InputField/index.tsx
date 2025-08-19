@@ -63,6 +63,7 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
           className={`${styles.input} ${error && styles.inputError}`}
           aria-invalid={!!error}
           disabled={disabled}
+          style={{ padding: icon ? "14px 45px 14px 16px" : "14px 16px" }}
           {...rest}
         />
         {IconComponent && (
