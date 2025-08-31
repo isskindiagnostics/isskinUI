@@ -44,7 +44,6 @@
   border: 1px solid var(--color-base-grey100);
   padding: 14px 45px 14px 16px;
   transition: ease-in-out 0.2s;
-  font-weight: 300;
   background-color: transparent;
 }
 
@@ -67,7 +66,6 @@
   font-family: var(--typography-font-family-body);
   font-size: var(--typography-text-desktop-xl-font-size);
   color: var(--color-base-grey200);
-  font-weight: 300;
 }
 
 .input:disabled::placeholder {

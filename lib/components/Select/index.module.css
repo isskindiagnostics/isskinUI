@@ -25,13 +25,11 @@
   border-radius: var(--radius-xs);
   border: 1px solid var(--color-base-grey100);
   transition: ease-in-out 0.2s;
-  font-weight: 300;
   cursor: pointer;
   background-color: transparent;
   font-family: var(--typography-font-family-body);
   font-size: var(--typography-text-desktop-xl-font-size);
   color: var(--color-brand-black);
-  font-weight: 300;
   height: 50px;
 }
 
@@ -62,7 +60,6 @@
   font-family: var(--typography-font-family-body);
   font-size: var(--typography-text-desktop-xl-font-size);
   color: var(--color-base-grey200);
-  font-weight: 300;
 }
 
 .input[data-disabled][data-placeholder] {
@@ -107,7 +104,6 @@
   font-size: var(--typography-text-desktop-xl-font-size);
   color: var(--color-brand-black);
   border-radius: var(--radius-xs);
-  font-weight: 300;
   padding: 16px;
   outline: none;
 }
