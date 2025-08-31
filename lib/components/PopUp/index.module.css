@@ -33,8 +33,6 @@
 .textContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   gap: 14px;
 }
 
@@ -52,8 +50,7 @@
   font-size: var(--typography-text-desktop-xl-font-size);
   line-height: var(--typography-text-desktop-xl-line-height);
   color: var(--color-brand-black);
-  text-align: center;
-  font-family: 400;
+  font-weight: 400;
   margin: 0;
 }
 

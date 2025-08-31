@@ -1,4 +1,5 @@
 import type { CSSProperties, HTMLAttributes } from "react";
+import ReactMarkdown from "react-markdown";
 
 import Button from "../Button";
 import styles from "./index.module.css";
@@ -18,6 +19,7 @@ export type PopUpProps = HTMLAttributes<HTMLDivElement> & {
     src: string;
     alt: string;
   };
+  textAlign?: "left" | "center" | "right";
   width?: CSSProperties["width"];
 };
 
@@ -27,9 +29,25 @@ const PopUp = ({
   primaryButton,
   secondaryButton,
   image,
+  textAlign = "center",
   width,
   ...rest
 }: PopUpProps) => {
+  const alignment: Record<string, CSSProperties> = {
+    left: {
+      alignItems: "flex-start",
+      textAlign: "left",
+    },
+    center: {
+      alignItems: "center",
+      textAlign: "center",
+    },
+    right: {
+      alignItems: "flex-end",
+      textAlign: "right",
+    },
+  };
+
   return (
     <div className={styles.overlay}>
       <div className={styles.container} style={{ width }} {...rest}>
@@ -42,9 +60,22 @@ const PopUp = ({
           />
         )}
 
-        <div className={styles.textContainer}>
+        <div
+          className={styles.textContainer}
+          style={{ ...alignment[textAlign] }}
+        >
           <h4 className={styles.title}>{title}</h4>
-          <p className={styles.text}>{text}</p>
+          <ReactMarkdown
+            components={{
+              p: ({ children }) => (
+                <p className={styles.text} style={{ ...alignment[textAlign] }}>
+                  {children}
+                </p>
+              ),
+            }}
+          >
+            {text}
+          </ReactMarkdown>
         </div>
 
         <div className={styles.btnContainer}>

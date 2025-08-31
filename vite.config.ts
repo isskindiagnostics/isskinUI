@@ -35,6 +35,7 @@ export default defineConfig({
       outDir: "dist",
       insertTypesEntry: true,
       rollupTypes: true,
+      entryRoot: "lib",
     }),
     libInjectCss(),
   ],
@@ -47,7 +48,11 @@ export default defineConfig({
   build: {
     copyPublicDir: false,
     lib: {
-      entry: resolve(__dirname, "lib/main.ts"),
+      entry: {
+        main: resolve(__dirname, "lib/main.ts"),
+        "components/index": resolve(__dirname, "lib/components/index.ts"),
+        "icons/index": resolve(__dirname, "lib/icons/index.ts"),
+      },
       formats: ["es"],
     },
     rollupOptions: {
