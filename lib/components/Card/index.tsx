@@ -52,14 +52,16 @@ const Card = ({
       <div className={styles.top}>
         <span className={styles.cardName}>{cardName?.split(" ")[0]}</span>
         <div className={styles.topItems}>
-          <IconLink
-            icon="Edit"
-            renderAs={renderLinkAs}
-            className={styles.iconLink}
-            onClick={onClick}
-          >
-            Editar
-          </IconLink>
+          {onClick && (
+            <IconLink
+              icon="Edit"
+              renderAs={renderLinkAs}
+              className={styles.iconLink}
+              onClick={onClick}
+            >
+              Editar
+            </IconLink>
+          )}
           {isDefault && (
             <Badge
               className={styles.badge}
