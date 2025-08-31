@@ -1,28 +1,18 @@
 import "../../lib/theme/theme.css";
 import "../../lib/styles/index.css";
 
-import FormCard from "../../lib/components/FormCard";
+import Card from "../../lib/components/Card";
 
 function App() {
   return (
-    <>
-      <FormCard
-        icon={"Pipette"}
-        description={"Hi"}
-        selected={true}
-        // style={{ marginBottom: 10 }}
-      />
-      <FormCard
-        icon={"Pipette"}
-        description={"Hi"}
-        style={{ marginBottom: 10 }}
-      />
-      <FormCard
-        icon={"Pipette"}
-        description={"Hi"}
-        style={{ marginBottom: 10 }}
-      />
-    </>
+    <Card
+      cardName="Nubank"
+      cardHolder="Larissa Aparecida Costa Soares"
+      cardNumber="1234"
+      expirationDate={new Date()}
+      isDefault={true}
+      flag="mastercard"
+    />
   );
 }
 

@@ -7,13 +7,13 @@ import IconLink from "../IconLink";
 import styles from "./index.module.css";
 
 export type CardProps = HTMLAttributes<HTMLDivElement> & {
-  cardName: string;
+  cardName?: string;
   cardHolder: string;
   cardNumber: string | number;
   expirationDate: Date;
   isDefault: boolean;
   flag: Flag;
-  onClick: () => void;
+  onClick?: () => void;
   variant?: "black" | "grey" | "blue";
   className?: string;
   renderLinkAs?: "button" | "link";
@@ -32,20 +32,41 @@ const Card = ({
   className,
   ...rest
 }: CardProps) => {
+  const getDisplayName = (fullName: string): string => {
+    const names = fullName
+      .trim()
+      .split(" ")
+      .filter((name) => name.length > 0);
+
+    if (names.length <= 2) {
+      return fullName;
+    }
+
+    return `${names[0]} ${names[names.length - 1]}`;
+  };
+
+  const displayCardHolder = getDisplayName(cardHolder);
+
   return (
     <div className={`${styles.card} ${className} ${styles[variant]}`} {...rest}>
       <div className={styles.top}>
-        <span className={styles.cardName}>{cardName.split(" ")[0]}</span>
+        <span className={styles.cardName}>{cardName?.split(" ")[0]}</span>
         <div className={styles.topItems}>
           <IconLink
             icon="Edit"
             renderAs={renderLinkAs}
             className={styles.iconLink}
-            onClick={() => onClick}
+            onClick={onClick}
           >
             Editar
           </IconLink>
-          {isDefault && <Badge className={styles.badge} label={"Padrão"} />}
+          {isDefault && (
+            <Badge
+              className={styles.badge}
+              labelClassName={styles.badgeLabel}
+              label={"Padrão"}
+            />
+          )}
           <Contactless className={styles.icon} />
         </div>
       </div>
@@ -53,7 +74,7 @@ const Card = ({
       <div className={styles.bottom}>
         <div className={styles.rows}>
           <div className={styles.rowtop}>
-            <p className={styles.text}>{cardHolder}</p>
+            <p className={styles.text}>{displayCardHolder}</p>
             <p className={styles.text}>
               {expirationDate.toLocaleDateString("pt-BR", {
                 month: "2-digit",
