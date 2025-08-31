@@ -1,5 +1,4 @@
 import type { CSSProperties, HTMLAttributes } from "react";
-import ReactMarkdown from "react-markdown";
 
 import Button from "../Button";
 import styles from "./index.module.css";
@@ -21,6 +20,13 @@ export type PopUpProps = HTMLAttributes<HTMLDivElement> & {
   };
   textAlign?: "left" | "center" | "right";
   width?: CSSProperties["width"];
+};
+
+const parseMarkdownToHtml = (text: string): string => {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, "<strong style='font-weight: 600;'>$1</strong>")
+    .replace(/\*(.*?)\*/g, "<em>$1</em>")
+    .replace(/\n/g, "<br />");
 };
 
 const PopUp = ({
@@ -65,17 +71,11 @@ const PopUp = ({
           style={{ ...alignment[textAlign] }}
         >
           <h4 className={styles.title}>{title}</h4>
-          <ReactMarkdown
-            components={{
-              p: ({ children }) => (
-                <p className={styles.text} style={{ ...alignment[textAlign] }}>
-                  {children}
-                </p>
-              ),
-            }}
-          >
-            {text}
-          </ReactMarkdown>
+          <div
+            className={styles.text}
+            style={{ ...alignment[textAlign] }}
+            dangerouslySetInnerHTML={{ __html: parseMarkdownToHtml(text) }}
+          />
         </div>
 
         <div className={styles.btnContainer}>
