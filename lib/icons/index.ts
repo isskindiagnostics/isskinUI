@@ -17,6 +17,7 @@ import Close from "./Close.tsx";
 import Contactless from "./Contactless.tsx";
 import Doctor from "./Doctor.tsx";
 import Document from "./Document.tsx";
+import Download from "./Download.tsx";
 import Edit from "./Edit.tsx";
 import Error from "./Error.tsx";
 import ExternalLink from "./ExternalLink.tsx";
@@ -70,6 +71,7 @@ export {
   Contactless,
   Doctor,
   Document,
+  Download,
   Edit,
   Error,
   ExternalLink,
@@ -124,6 +126,7 @@ export const IconsArray = [
   "Contactless",
   "Doctor",
   "Document",
+  "Download",
   "Edit",
   "Error",
   "ExternalLink",
