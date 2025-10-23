@@ -15,11 +15,17 @@ type LinkProps = PropsWithChildren<
   }
 >;
 
-const Link = ({ variant, renderAs, children, ...rest }: LinkProps) => {
+const Link = ({
+  variant,
+  renderAs,
+  children,
+  className,
+  ...rest
+}: LinkProps) => {
   if (renderAs === "button") {
     return (
       <button
-        className={`${styles.anchor} ${styles[variant]}`}
+        className={`${styles.anchor} ${styles[variant]} ${className}`}
         {...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}
       >
         {children}
@@ -29,7 +35,7 @@ const Link = ({ variant, renderAs, children, ...rest }: LinkProps) => {
 
   return (
     <a
-      className={`${styles.anchor} ${styles[variant]}`}
+      className={`${styles.anchor} ${styles[variant]} ${className}`}
       {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
     >
       {children}
